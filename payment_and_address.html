@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment_and_address</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #heading{
+            width: 60%;
+           
+          
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        #heading>img{
+            width: 180px;
+            margin-top: -15px;
+            margin-left: 40%;
+           
+        }
+        #heading>p{
+            margin-top: px;
+            margin-left: 280px;
+            color: #9cb57a;
+
+        }
+        hr{
+            width: 60%;
+            margin: auto;
+        }
+        #fedex{
+            width: 60%;
+            margin: auto;
+            margin-top: 15px;
+            justify-content: space-between;
+            display: flex;
+           
+
+        }
+        #fedex>div>img{
+            width: 130px;
+            height: 40px;
+        }
+        #fedex>div{
+            display: flex;
+        }
+        #fedex>select{
+            margin-top: 50px;
+            text-decoration: underline;
+        }
+      
+        #fedex>div>p{
+           margin-top: 7px;
+           margin-left: 10px;
+           
+          
+        }
+        #country_lag{
+            width: 15%;
+        }
+        #back_to_cart{
+            margin: auto;
+            width: 57%;
+            margin-top: 18px;
+            text-decoration: underline;
+        }
+        #address_main_div {
+            
+            margin: auto;
+           display: flex;
+           gap: 20px;
+            width: 57%;
+        }
+        #billing_address ,#shipping_address{
+           
+            border: 1px solid grey;
+            border-top: 1px solid white;
+            width: 50%;
+
+        }
+        .heading{
+            background-color: #f0ece0;
+            height: 30px;
+            padding-left:5px ;
+            padding-top: 5px;
+          
+            font-weight: bold;
+            border: 1px solid grey;
+            border-left:0.5px solid white ;
+            border-right:0.5px solid white ;
+        }
+        .heading p{
+            padding-bottom: 10px;
+        }
+
+          form{
+            display: block;
+            padding-bottom: 5px;
+          }
+
+            label {
+            text-align: left;
+            margin-right: 120px;
+            margin-left: 10px;
+              margin-top: 15px;
+
+              
+            }
+
+            input,
+            select {
+            width: 50%;
+            margin-top: 15px;
+            height: 25px;
+      
+            
+           }
+           #country{
+            width: 55%;
+           }
+           
+
+     
+    </style>
+</head>
+<body>
+    <!-- this div is for heading part -->
+    <div id="heading">
+        <img src="https://searchlogovector.com/wp-content/uploads/2018/09/overstock-logo-vector.png" alt="logo_heading">
+        <p>You are using our secure server</p>
+      
+      
+    </div>
+    <hr>
+    <!-- this is fedex logo and content part -->
+    <div id="fedex">
+
+        <div>
+        <img src="https://ak1.ostkcdn.com/img/mxc/20170922_fedexLogo.png" alt="fedex_logo">
+        <p>
+            Secure checkout provided by FedEx International. <br>
+            Your order total includes customs and taxes, if applicable.</p>
+        </div>
+            <select name="country/language" id="country_lag">
+                
+                <option value="United Kingdom / English">United Kingdom / English</option>
+                <option value="Lebanon/ Arabe">Lebanon/ Arabe</option>
+                <option value="Russia / Russian">Russia / Russian</option>
+                <option value="Deutschland / Deutsch">Deutschland / Deutsch</option>
+                <option value="France / Français">France / Français</option>
+                <option value="Italia / Italiano">Italia / Italiano</option>
+                <option value="Portugal / Português">Portugal / Português</option>
+                <option value="United Kingdom / English">United Kingdom / English</option>
+                <option value="United Kingdom / English">United Kingdom / English</option>
+                <option value="China / Chinese">China / Chinese</option>
+            </select>
+
+
+    </div>
+
+    <!-- fedex part and other detail end here -->
+   
+    <div id="back_to_cart"><p> << Back to cart</p></div>
+    <div id="address_main_div">
+        
+        <div id="billing_address">
+            <div class="heading">Billing Address</div>
+
+
+            <form action="submit_form.php" method="POST">
+                <label for="email">Email*  &nbsp;  &nbsp;  &nbsp;  &nbsp; </label>
+                
+                <input type="email" id="email" name="email" required><br>
+            
+                <label for="firstName">First Name*</label>
+                <input type="text" id="firstName" name="firstName" required><br>
+            
+                <label for="lastName">Last Name*</label>
+                <input type="text" id="lastName" name="lastName" required><br>
+            
+                <label for="company">Company  &nbsp;  &nbsp; </label>
+                <input type="text" id="company" name="company"><br>
+            
+                <label for="taxId">Tax ID  &nbsp;  &nbsp;  &nbsp;  &nbsp; </label>
+                <input type="text" id="taxId" name="taxId"><br>
+            
+                <label for="addressLine1">Address Line 1*</label>
+                <input type="text" id="addressLine1" name="addressLine1" required style="margin-left: -30px;"><br>
+            
+                <label for="addressLine2">Address Line 2</label>
+                <input type="text" id="addressLine2" name="addressLine2" style="margin-left: -24px;"><br>
+            
+                <label for="country">Country*</label>
+                <select id="country" name="country" required style="margin-left: 15px;">
+                  <option value="select">Select Country</option>
+                  <!-- Add more options here -->
+                  <option value="usa">United States</option>
+                  <option value="canada">Canada</option>
+                  <!-- Add more countries as needed -->
+                </select><br>
+            
+                <label for="city">City*</label>
+                <input type="text" id="city" name="city" required style="margin-left: 40px;"><br>
+            
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" style="margin-left: 43px;"><br>
+            
+                <label for="zipCode">ZIP Code</label>
+                <input type="text" id="zipCode" name="zipCode" style="margin-left: 14px;"><br>
+            
+                <label for="phone">Phone #*</label>
+                <input type="tel" id="phone" name="phone" required style="margin-left: 14px;"><br>
+            
+                <!-- <input type="submit" value="Submit"> -->
+              </form>
+        </div>
+        <div id="shipping_address">
+            <div class="heading">Shipping Address</div>
+             <form action="submit_form.php" method="POST">
+                <label for="email">Email*  &nbsp;  &nbsp;  &nbsp;  &nbsp; </label>
+                
+                <input type="email" id="email" name="email" required><br>
+            
+                <label for="firstName">First Name*</label>
+                <input type="text" id="firstName" name="firstName" required><br>
+            
+                <label for="lastName">Last Name*</label>
+                <input type="text" id="lastName" name="lastName" required><br>
+            
+                <label for="company">Company  &nbsp;  &nbsp; </label>
+                <input type="text" id="company" name="company"><br>
+            
+                <label for="taxId">Tax ID  &nbsp;  &nbsp;  &nbsp;  &nbsp; </label>
+                <input type="text" id="taxId" name="taxId"><br>
+            
+                <label for="addressLine1">Address Line 1*</label>
+                <input type="text" id="addressLine1" name="addressLine1" required style="margin-left: -30px;"><br>
+            
+                <label for="addressLine2">Address Line 2</label>
+                <input type="text" id="addressLine2" name="addressLine2" style="margin-left: -24px;"><br>
+            
+                <label for="country">Country*</label>
+                <select id="country" name="country" required style="margin-left: 15px;">
+                  <option value="select">Select Country</option>
+                  <!-- Add more options here -->
+                  <option value="usa">United States</option>
+                  <option value="canada">Canada</option>
+                  <!-- Add more countries as needed -->
+                </select><br>
+            
+                <label for="city">City*</label>
+                <input type="text" id="city" name="city" required style="margin-left: 40px;"><br>
+            
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" style="margin-left: 43px;"><br>
+            
+                <label for="zipCode">ZIP Code</label>
+                <input type="text" id="zipCode" name="zipCode" style="margin-left: 14px;"><br>
+            
+                <label for="phone">Phone #*</label>
+                <input type="tel" id="phone" name="phone" required style="margin-left: 14px;"><br>
+            
+                <!-- <input type="submit" value="Submit"> -->
+              </form>
+        </div>
+     
+    </div>
+    
+</body>
+</html>
