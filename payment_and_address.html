@@ -127,7 +127,94 @@
            #country{
             width: 55%;
            }
+           .submit{
+            margin-left: 40%;
+            border-radius: 5px;
+            background-color: #81a555 ;
+            color: white;
+            width: 30%;
+            height: 30px;
+            border: none;
+            font-size: 15px;
+
+           }
+
+
+           #card_payment_section{
+            margin: auto;
+            margin-top: 25px;
+         
+           gap: 20px;
+            width: 57%;
+            border: 1px solid grey;
+
+           }
+           #heading_of_card_payment{
+            background-color: #f0ece0;
+            height: 30px;
+            padding-left:5px ;
+            padding-top: 5px;
+          
+            font-weight: bold;
+            border: 1px solid grey;
+            border-top: none ;
+            border-left:0.5px solid white ;
+            border-right:0.5px solid white ;
+
+           }
+           #payment_box{
            
+            border-top: 1px solid white;
+            width: 60%;
+            
+            
+
+
+           }
+           #card_icon_box{
+            padding: 5px 5px;
+           }
+
+        label[for ="cardNumber"]
+        {
+            margin-right:31%;
+        }
+        label[for ="cvv"]
+        {
+            margin-right:39.5%;
+        }
+        label[for ="cvv"]
+        {
+            margin-right:39.5%;
+        }
+        label[for="expiryDate"]
+        {
+            margin-right:18%;
+        }
+        label[for="name"]
+        {
+            margin-right:38.5%;
+        }
+        input[name="cvv"]
+        {
+            width: 10%;
+        }
+        #payment_submit{
+            margin-left: 25%;
+            margin-top: 35px;
+
+        }
+        #payment_submit{
+            margin-left: 40%;
+            border-radius: 5px;
+            background-color: #81a555 ;
+            color: white;
+            width: 30%;
+            height: 30px;
+            border: none;
+            font-size: 15px;
+
+        }
 
      
     </style>
@@ -221,6 +308,7 @@
                 <input type="tel" id="phone" name="phone" required style="margin-left: 14px;"><br>
             
                 <!-- <input type="submit" value="Submit"> -->
+                <input type="submit" value="Submit" class="submit">
               </form>
         </div>
         <div id="shipping_address">
@@ -269,11 +357,42 @@
                 <label for="phone">Phone #*</label>
                 <input type="tel" id="phone" name="phone" required style="margin-left: 14px;"><br>
             
-                <!-- <input type="submit" value="Submit"> -->
+                <input type="submit" value="submit" class="submit">
               </form>
         </div>
      
     </div>
+
+    <div id="card_payment_section">
+        <div id="heading_of_card_payment">Payment Information</div>
+        <div id="card_icon_box">
+            <img src="https://checkout-ostk.crossborder.fedex.com/static/css/images/pm/visa.png" alt="vesa">
+            <img src="https://checkout-ostk.crossborder.fedex.com/static/css/images/pm/mastercard.png" alt="vesa">
+        </div>
+        <div id="payment_box">
+        <!-- <form onsubmit="return validateForm()"> -->
+            <form action="submit">
+            <label for="cardNumber">Card Number:</label>
+            <input type="text" id="cardNumber" name="cardNumber" required><br>
+        
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" required><br>
+        
+            <label for="expiryDate">Expiry Date (MM/YYYY):</label>
+            <input type="text" id="expiryDate" name="expiryDate" required><br>
+        
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+        
+            <input type="submit" value="PLACE ORDER" id="payment_submit">
+          </form>
+        </div>
+
+    </div>
+    <div style="height: 400px;">
+        grey
+    </div>
+
     
 </body>
 </html>
