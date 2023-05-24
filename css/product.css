@@ -51,3 +51,73 @@ img{
     border: none;
     margin-bottom: 8px;
     }
+
+    /* footer section css start here  */
+    #footer{
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        padding: 50px 0px 0px 100px;
+        background-color: rgb(84,86,88);
+        height: 300px;
+        
+    }
+    #footer>div{
+        /* border: 1px solid; */
+        text-align: left;
+         display: flex;
+         flex-direction: column;
+         gap: 20px;
+        
+    }
+    #footer>div>h4{
+        color: rgb(248,245,244) ;
+        font-size: 14px;
+        font-weight:700;
+        font-family:"Times New Roman";
+    
+       
+       
+    }
+    #footer>div>a{
+        color: rgb(248,245,244)  ;
+        text-decoration: none;
+        font-size: 12px;
+        font-family:"Times New Roman";
+        font-weight:700;
+    }
+    
+    #end{
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(47,51,55);
+        height: 100px;
+        color: rgb(248,245,244)  ;
+    }#endone{
+        margin: 20px 0px 0px 150px;
+    }
+    #endone>p{
+        font-family: "Times New Roman";
+        font-size: 12px;
+        font-weight: 400;
+    }
+    
+    #endtwo{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        gap: 10px;
+    }
+    #endtwo>a{
+        margin-top: 30px;
+          text-decoration: none;
+        color: rgb(248,245,244)  ;
+        font-family: "Times New Roman";
+        font-size: 12px;
+        font-weight: 400;
+    }
+    #ind{
+        height: 14px;
+        width: 30px;
+        align-content: center;
+    }
+    /* footer section css ends here  */
