@@ -4,9 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Overstock.com | The Best Deals</title>
+    <link rel="stylesheet" href="./css/product.css">
 </head>
 <body>
-    
+    <div id="top_description">
+        <p>Furniture / Living room furniture</p>
+        <h1>Living Room Furniture Sale</h1>
+        <p id="sort_drop"> Sort by :  <span>
+                <select id="sort">
+                    <option value="">Best Selling</option>
+                    <option value="lowToHigh">Low To High</option>
+                    <option value="HighToLow">High To Low</option>
+                </select></span></p>
+    </div>
+    <div id="mainbody">
+        <div id="side_sec">
+            <select id="price_filter">
+                <option value="">Filter by price</option>
+                <option value="30-9490">Under INR 9490</option>
+                <option value="9490-18981">INR 9490 - 18981</option>
+                <option value="18981-70000">INR 18982 +</option>
+            </select>
+            <hr>
+            <select id="demo_filter">
+                <option value="">Categories</option>
+                <!-- <option value="Red">Red</option>
+                <option value="Green">Green</option>
+                <option value="Yellow">Yellow</option>
+                <option value="Pink">Pink</option>
+                <option value="Blue">Blue</option>
+                <option value="Black">Black</option>
+                <option value="Orange">Orange</option>
+                <option value="Purple">Purple</option>
+                <option value="White">White</option> -->
+            </select>
+            <hr>
+            <select id="demo_filter">
+                <option value="">Styles</option>
+                <!-- <option value="X">X</option>
+                <option value="XX">XX</option>
+                <option value="L">L</option>
+                <option value="M">M</option>
+                <option value="XXL">XXL</option> -->
+            </select>
+            <hr>
+            <select id="demo_filter">
+                <option value="">Colors</option>
+                <!-- <option value="Regular">Regular</option> -->
+            </select>
+            <hr>
+            <select id="demo_filter">
+                <option value="">Brands</option>
+                <!-- <option value="Up to 20%">Up to 20%</option>
+                <option value="Up to 30%">Up to 30%</option>
+                <option value="Up to 40%">Up to 40%</option>
+                <option value="Up to 50%">Up to 50%</option>
+                <option value="Up to 60%">Up to 60%</option> -->
+            </select>
+        </div>
+        <div id="parent">
+            <!-- this section is appended using javascript methods -->
+        </div>
+    </div>
 </body>
+<script src="./scripts/product.js"></script>
 </html>
