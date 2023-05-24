@@ -122,8 +122,6 @@ function displayproduct(furniture_data){
         img.setAttribute("src",el.img_url);
         img.setAttribute("alt",el.name);
         img.setAttribute("class","product_image");
-        var desc = document.createElement("p");
-        desc.textContent = el.desc;
         var name = document.createElement("p");
         name.textContent = el.name;
         var price = document.createElement("p");
@@ -141,7 +139,7 @@ var product_desc = [];
 function navToNextPage(product){
     product_desc.push(product);
     localStorage.setItem("decription_data",JSON.stringify(product_desc));
-    window.location.href="./mensdesc.html";
+    window.location.href="./productdesc.html";
 }
 document.getElementById("sort").addEventListener("change",pricesort);
 function pricesort(){
