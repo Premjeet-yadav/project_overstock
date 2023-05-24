@@ -1,0 +1,35 @@
+body{
+    font-family: 'Arial';
+}
+#parent{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+    gap: 10%;
+    margin: auto;
+    padding: 2%;
+}
+#parent+h4{
+    padding: 2%;
+    font-size: large;
+}
+#side_panel{
+    width: 40%;
+    padding-bottom: 80px;
+    margin-bottom: auto;
+    align-self: first baseline;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#cartbtn{
+    display: block;
+    background-color: black;
+    color: white;
+    height: 50px;
+    
+}
+#product_image{
+    border: 1px,solid,grey;
+    padding: 2px;
+}
