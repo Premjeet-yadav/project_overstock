@@ -13,8 +13,6 @@
         }
         #heading{
             width: 60%;
-           
-          
             margin: auto;
             display: flex;
             align-items: center;
@@ -43,8 +41,6 @@
             margin-top: 15px;
             justify-content: space-between;
             display: flex;
-           
-
         }
         #fedex>div>img{
             width: 130px;
@@ -60,9 +56,7 @@
       
         #fedex>div>p{
            margin-top: 7px;
-           margin-left: 10px;
-           
-          
+           margin-left: 10px;  
         }
         #country_lag{
             width: 15%;
@@ -106,6 +100,10 @@
             display: block;
             padding-bottom: 5px;
           }
+          .heading input{
+
+            margin-left: 10px;
+          }
 
             label {
             text-align: left;
@@ -127,22 +125,13 @@
            #country{
             width: 55%;
            }
-           .submit{
-            margin-left: 40%;
-            border-radius: 5px;
-            background-color: #81a555 ;
-            color: white;
-            width: 30%;
-            height: 30px;
-            border: none;
-            font-size: 15px;
-
-           }
+          
 
 
            #card_payment_section{
             margin: auto;
             margin-top: 25px;
+            height: 330px;
          
            gap: 20px;
             width: 57%;
@@ -165,40 +154,14 @@
            #payment_box{
            
             border-top: 1px solid white;
-            width: 60%;
+            width: 70%;
             
-            
-
-
            }
+        
            #card_icon_box{
             padding: 5px 5px;
            }
 
-        label[for ="cardNumber"]
-        {
-            margin-right:31%;
-        }
-        label[for ="cvv"]
-        {
-            margin-right:39.5%;
-        }
-        label[for ="cvv"]
-        {
-            margin-right:39.5%;
-        }
-        label[for="expiryDate"]
-        {
-            margin-right:18%;
-        }
-        label[for="name"]
-        {
-            margin-right:38.5%;
-        }
-        input[name="cvv"]
-        {
-            width: 10%;
-        }
         #payment_submit{
             margin-left: 25%;
             margin-top: 35px;
@@ -215,6 +178,127 @@
             font-size: 15px;
 
         }
+        form input,select{
+            float: right;
+             margin-right: 5%;
+        }
+        form label{
+            float: left;
+            margin-left: 5px;
+            margin-top: 22px;
+        }
+        .submit{
+            margin-left: 40%;
+            border-radius: 5px;
+            background-color: #81a555 ;
+            color: white;
+            width: 30%;
+            height: 30px;
+            border: none;
+            font-size: 15px;
+            float: left;
+            margin-bottom:10px ;
+
+           }
+           label[for ="expiryDate"]{
+            margin-left: -15px;
+            margin-left: 5px;
+           }
+           #Customer_Testimonials{
+            width: 60%;
+            margin: auto;
+            border-bottom: 1px solid grey;
+            padding: 10px;
+           }
+           #AUSTRALIAN_FLAG{
+            display: flex;
+            gap: 10px;
+            margin: auto;
+            width: 60%;
+            margin-top: 25px;
+
+           }
+           #AUSTRALIAN_FLAG img{
+            width: 70px;
+            height: 40px;
+           }
+           #return_policy{
+            display: flex;
+            margin: auto;
+            width: 60%;
+            justify-content: space-between;
+            margin-top: 35px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid grey;
+
+           }
+           #right_reserved{
+            display: flex;
+            margin: auto;
+            width: 60%;
+            justify-content: space-between;
+            margin-top:10px ;
+
+           }
+            @media (min-width: 14in) and (max-width: 15in) {
+          
+            form input,select{
+            float: right;
+             margin-right: 0%;
+             margin-left: 10px;
+             width: 120px;
+        } 
+        select{
+            margin-top: -20px;
+        }
+        label[for ="expiryDate"]{
+            margin-left: 5px;
+            margin-left: 5px;}
+
+            #payment_box{
+                width: 100%;
+            }
+
+            /* CSS for form alignment */
+            #pay_form{
+            display: flex;
+            flex-direction: column;
+            max-width: 400px; /* Adjust the maximum width as needed */
+            margin: 0 auto;
+            }
+
+            .pay_label {
+            margin-bottom: 5px;
+            margin-top: -25px;
+            }
+
+            .pay_input {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-top: -2px;
+            }
+
+            input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+            }
+            #payment_submit{
+                margin-top: -10px;
+                margin-left: 10px;
+
+            }
+            #heading {
+               font-size: 10px;
+               
+                
+            }
+        
+ }
+        
+
 
      
     </style>
@@ -263,8 +347,8 @@
             <div class="heading">Billing Address</div>
 
 
-            <form action="submit_form.php" method="POST">
-                <label for="email">Email*  &nbsp;  &nbsp;  &nbsp;  &nbsp; </label>
+            <form action="submit_form.php" method="POST" >
+                <label for="email">Email* </label>
                 
                 <input type="email" id="email" name="email" required><br>
             
@@ -274,20 +358,20 @@
                 <label for="lastName">Last Name*</label>
                 <input type="text" id="lastName" name="lastName" required><br>
             
-                <label for="company">Company  &nbsp;  &nbsp; </label>
+                <label for="company">Company </label>
                 <input type="text" id="company" name="company"><br>
             
-                <label for="taxId">Tax ID  &nbsp;  &nbsp;  &nbsp;  &nbsp; </label>
+                <label for="taxId">Tax ID  </label>
                 <input type="text" id="taxId" name="taxId"><br>
             
                 <label for="addressLine1">Address Line 1*</label>
-                <input type="text" id="addressLine1" name="addressLine1" required style="margin-left: -30px;"><br>
+                <input type="text" id="addressLine1" name="addressLine1" required ><br>
             
                 <label for="addressLine2">Address Line 2</label>
-                <input type="text" id="addressLine2" name="addressLine2" style="margin-left: -24px;"><br>
+                <input type="text" id="addressLine2" name="addressLine2" ><br>
             
                 <label for="country">Country*</label>
-                <select id="country" name="country" required style="margin-left: 15px;">
+                <select id="country" name="country" required >
                   <option value="select">Select Country</option>
                   <!-- Add more options here -->
                   <option value="usa">United States</option>
@@ -296,16 +380,16 @@
                 </select><br>
             
                 <label for="city">City*</label>
-                <input type="text" id="city" name="city" required style="margin-left: 40px;"><br>
+                <input type="text" id="city" name="city" required ><br>
             
                 <label for="state">State</label>
-                <input type="text" id="state" name="state" style="margin-left: 43px;"><br>
+                <input type="text" id="state" name="state" ><br>
             
                 <label for="zipCode">ZIP Code</label>
-                <input type="text" id="zipCode" name="zipCode" style="margin-left: 14px;"><br>
+                <input type="text" id="zipCode" name="zipCode" ><br>
             
                 <label for="phone">Phone #*</label>
-                <input type="tel" id="phone" name="phone" required style="margin-left: 14px;"><br>
+                <input type="tel" id="phone" name="phone" required ><br>
             
                 <!-- <input type="submit" value="Submit"> -->
                 <input type="submit" value="Submit" class="submit">
@@ -313,8 +397,8 @@
         </div>
         <div id="shipping_address">
             <div class="heading">Shipping Address</div>
-             <form action="submit_form.php" method="POST">
-                <label for="email">Email*  &nbsp;  &nbsp;  &nbsp;  &nbsp; </label>
+            <form action="submit_form.php" method="POST" >
+                <label for="email">Email* </label>
                 
                 <input type="email" id="email" name="email" required><br>
             
@@ -324,20 +408,20 @@
                 <label for="lastName">Last Name*</label>
                 <input type="text" id="lastName" name="lastName" required><br>
             
-                <label for="company">Company  &nbsp;  &nbsp; </label>
+                <label for="company">Company </label>
                 <input type="text" id="company" name="company"><br>
             
-                <label for="taxId">Tax ID  &nbsp;  &nbsp;  &nbsp;  &nbsp; </label>
+                <label for="taxId">Tax ID  </label>
                 <input type="text" id="taxId" name="taxId"><br>
             
                 <label for="addressLine1">Address Line 1*</label>
-                <input type="text" id="addressLine1" name="addressLine1" required style="margin-left: -30px;"><br>
+                <input type="text" id="addressLine1" name="addressLine1" required ><br>
             
                 <label for="addressLine2">Address Line 2</label>
-                <input type="text" id="addressLine2" name="addressLine2" style="margin-left: -24px;"><br>
+                <input type="text" id="addressLine2" name="addressLine2" ><br>
             
                 <label for="country">Country*</label>
-                <select id="country" name="country" required style="margin-left: 15px;">
+                <select id="country" name="country" required >
                   <option value="select">Select Country</option>
                   <!-- Add more options here -->
                   <option value="usa">United States</option>
@@ -346,18 +430,19 @@
                 </select><br>
             
                 <label for="city">City*</label>
-                <input type="text" id="city" name="city" required style="margin-left: 40px;"><br>
+                <input type="text" id="city" name="city" required ><br>
             
                 <label for="state">State</label>
-                <input type="text" id="state" name="state" style="margin-left: 43px;"><br>
+                <input type="text" id="state" name="state" ><br>
             
                 <label for="zipCode">ZIP Code</label>
-                <input type="text" id="zipCode" name="zipCode" style="margin-left: 14px;"><br>
+                <input type="text" id="zipCode" name="zipCode" ><br>
             
                 <label for="phone">Phone #*</label>
-                <input type="tel" id="phone" name="phone" required style="margin-left: 14px;"><br>
+                <input type="tel" id="phone" name="phone" required ><br>
             
-                <input type="submit" value="submit" class="submit">
+                <!-- <input type="submit" value="Submit"> -->
+                <input type="submit" value="Submit" class="submit">
               </form>
         </div>
      
@@ -370,29 +455,98 @@
             <img src="https://checkout-ostk.crossborder.fedex.com/static/css/images/pm/mastercard.png" alt="vesa">
         </div>
         <div id="payment_box">
-        <!-- <form onsubmit="return validateForm()"> -->
-            <form action="submit">
-            <label for="cardNumber">Card Number:</label>
-            <input type="text" id="cardNumber" name="cardNumber" required><br>
+        <form onsubmit="return validateForm()" id="pay_form">
+           
+            <label for="cardNumber" class="pay_label">Card Number:</label>
+            <input type="text" id="cardNumber" name="cardNumber" required class="pay_input"><br>
         
-            <label for="cvv">CVV:</label>
-            <input type="text" id="cvv" name="cvv" required><br>
+            <label for="cvv" class="pay_label">CVV:</label>
+            <input type="text" id="cvv" name="cvv" required class="pay_input"><br>
         
-            <label for="expiryDate">Expiry Date (MM/YYYY):</label>
-            <input type="text" id="expiryDate" name="expiryDate" required><br>
+            <label for="expiryDate" class="pay_label">Expiry Date (MM/YYYY):</label>
+            <input type="text" id="expiryDate" name="expiryDate" required class="pay_input"><br>
         
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br>
+            <label for="name" class="pay_label">Name:</label>
+            <input type="text" id="name" name="name" required class="pay_input"><br>
         
-            <input type="submit" value="PLACE ORDER" id="payment_submit">
+            <input type="submit" value="Place Order" id="payment_submit">
           </form>
         </div>
 
     </div>
-    <div style="height: 400px;">
-        grey
+
+    <div id="Customer_Testimonials"><h2>Customer Testimonials:</h2></div>
+    <div id="AUSTRALIAN_FLAG">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2qTeny86Fkd3L7wuETwsGBug53jyBjAOYqaYIxl1MIg&usqp=CAU&ec=48665698" alt="aus_flag">
+        <p>"I received my item today and I am just emailing to say how pleased I am with your service. I am thrilled with the coat I ordered, a coat I cannot buy in Australia. The price was fair and I received the item within 10 days!" Thank you for excellent service."</p>
     </div>
+    <div id="return_policy">
+        <div>Return Policy</div>
+        <div>Contact Customer Care</div>
+        <div>FAQ</div>
+        <div>Privacy Policy</div>
+        <div>Site User Terms & Conditions*</div>
+    </div>
+    <div id="right_reserved">
+        <div><p>© 2023 Overstock.com All Rights Reserved</p></div>
+        <div>
+            <img src="https://ak1.ostkcdn.com/img/mxc/20200630-intl-privacy_shield.png" alt="image">
+        </div>
+    </div>
+
+   
 
     
 </body>
+
+     <script>
+    function validateForm() {
+      // Get form inputs
+      var cardNumber = document.getElementById("cardNumber").value;
+      var cvv = document.getElementById("cvv").value;
+      var expiryDate = document.getElementById("expiryDate").value;
+      var name = document.getElementById("name").value;
+
+      // Validate card number
+      var validCardNumber = "123456789101112";
+      if (cardNumber !== validCardNumber) {
+        alert("Invalid card number");
+        return false;
+      }
+
+      // Validate CVV
+      var validCvv = "123";
+      if (cvv !== validCvv) {
+        alert("Invalid CVV");
+        return false;
+      }
+
+      // Validate expiry date
+      var currentDate = new Date();
+      var currentYear = currentDate.getFullYear();
+      var currentMonth = currentDate.getMonth() + 1;
+      var parts = expiryDate.split("/");
+      var inputMonth = parseInt(parts[0], 10);
+      var inputYear = parseInt(parts[1], 10);
+
+      if (
+        inputYear < currentYear ||
+        (inputYear === currentYear && inputMonth < currentMonth)
+      ) {
+        alert("Invalid expiry date");
+        return false;
+      }
+
+      // Redirect to OTP.html
+      var otp = prompt("Enter OTP:");
+      if (otp === "1234") {
+        alert("Payment successful");
+        window.location.href = "transaction_successful.html";
+      } else {
+        alert("Invalid OTP");
+      }
+    }
+            
+  </script>
+
 </html>
