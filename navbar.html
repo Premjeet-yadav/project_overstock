@@ -56,6 +56,39 @@
       font-size: 18px;
       margin: 0 5px;
     }
+
+    .categories {
+      display: flex;
+    }
+
+    .category {
+      margin: 0 10px;
+      position: relative;
+    }
+
+    .description-popup {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #f1f1f1;
+      padding: 10px;
+      z-index: 1;
+    }
+
+    .category:hover .description-popup {
+      display: block;
+    }
+
+    .description-section {
+      display: flex;
+    }
+
+    .description-column {
+      flex: 1;
+      padding: 10px;
+    }
   </style>
 </head>
 <body>
@@ -79,6 +112,39 @@
           <div class="icon">
             <i class="fas fa-shopping-cart"></i>
           </div>
+        </div>
+      </div>
+      <div class="categories">
+        <div class="category">
+          <p>Furniture</p>
+          <div class="description-popup">
+            <div class="description-section">
+              <div class="description-column">
+                <p>Living Room Furniture</p>
+                <p>Sofas and Couches</p>
+                <p>Sectionals</p>
+                <p>Benches</p>
+                <p>Ottomans and Poufs</p>
+              </div>
+              <div class="description-column">
+                <p>Accent Chairs</p>
+                <p>Recliners</p>
+                <p>Coffee and Accent Tables</p>
+                <p>TV Stands</p>
+                <p>Best Sellers</p>
+              </div>
+              <div class="description-column">
+                <p>Bedroom Furniture</p>
+                <p>Beds</p>
+                <p>Bedroom Sets</p>
+                <p>Headboards</p>
+                <p>Bed Frames</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="category">
+          <p>Outdoor</p>
         </div>
       </div>
     </nav>
