@@ -4,7 +4,6 @@ body{
 #parent{
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-evenly; */
     gap: 10%;
     margin: auto;
     padding: 2%;
@@ -32,4 +31,16 @@ body{
 #product_image{
     border: 1px,solid,grey;
     padding: 2px;
+}
+#description{
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    text-align: center;
+    margin: 20px;
+
+}
+#description > img{
+    height: 20px;
+    width: 20px;
 }
