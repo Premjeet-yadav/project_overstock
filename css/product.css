@@ -4,16 +4,24 @@ body{
 
 /* saperate */
 #parent{
-    display:grid;
+    /* margin: 10%; */
+    display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap:10px;
+    gap:20px;
+    padding: 5px;
    
 }
 #parent > div{
+    border: #7e7d7b solid 1px;
     padding: 5px;
     width: 100%;
     margin-bottom: 10px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#parent > div > p{
+    font-size: smaller;
+}
+#price{
+    font-style: bold;
 }
 img{
     width: 100%;
@@ -125,3 +133,11 @@ img{
         align-content: center;
     }
     /* footer section css ends here  */
+
+.rating {
+  color: #7e7d7b; /* Set the star color */
+}
+
+.checked {
+  color: #ffac33; /* Set the color for filled stars */
+}

@@ -125,12 +125,25 @@ function displayproduct(furniture_data){
         var name = document.createElement("p");
         name.textContent = el.name;
         var price = document.createElement("p");
+        price.setAttribute("id","price");
         price.textContent = "Sale INR "+el.price;
         price.style.color = "red";
         div.addEventListener("click",function(){
             navToNextPage(el);
         });
-        div.append(img,price,name);
+    var rating = document.createElement("div");
+    rating.classList.add("rating");
+
+    // Create and append the star icons based on the rating
+    for (var i = 1; i <= 5; i++) {
+      var star = document.createElement("span");
+      star.classList.add("fa", "fa-star");
+      if (i <= el.rating) {
+        star.classList.add("checked");
+      }
+      rating.appendChild(star);
+    }
+        div.append(img,price,rating,name);
      document.getElementById("parent").append(div);
     })
     

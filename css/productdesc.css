@@ -8,10 +8,10 @@ body{
     margin: auto;
     padding: 2%;
 }
-#parent+h4{
+/* #parent+h4{
     padding: 2%;
     font-size: large;
-}
+} */
 #side_panel{
     width: 40%;
     padding-bottom: 80px;
@@ -32,6 +32,9 @@ body{
     border: 1px,solid,grey;
     padding: 2px;
 }
+#product_image > img{
+    padding: 10px;
+}
 #description{
     display: flex;
     justify-content: center;
@@ -44,3 +47,45 @@ body{
     height: 20px;
     width: 20px;
 }
+
+.rating {
+    color: #7e7d7b; /* Set the star color */
+  }
+  
+  .checked {
+    color: #ffac33; /* Set the color for filled stars */
+  }
+
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+  }
+  
+  .popup p {
+    margin-bottom: 10px;
+  }
+  
+  .popup button {
+    margin-right: 10px;
+    padding: 8px 16px;
+    background-color: #ccc;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .popup button:hover {
+    background-color: #555;
+  }  
+  
+  
+  
+  
+  
