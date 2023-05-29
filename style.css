@@ -69,7 +69,7 @@ a:link {
     width: 20%;
     /* border: 1px solid; */
   }
-  #part2>div:hover{
+  #part2>div:hover,.slider-container>div:hover{
     transform: scale(1.1);
   }
   a>div{
