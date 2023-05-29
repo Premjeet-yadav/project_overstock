@@ -91,6 +91,49 @@
       flex: 1;
       padding: 10px;
     }
+    .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo {
+  flex: 1;
+  /* Logo styling */
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.container a {
+  text-decoration: none;
+  color: #333;
+  margin-left: 20px;
+}
+
+/* Media queries for responsive design */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .logo, .container {
+    flex: initial;
+    margin-bottom: 10px;
+  }
+  
+  .container {
+    justify-content: flex-start;
+  }
+}
+
     
   </style>
 </head>
