@@ -7,6 +7,7 @@
   /* header{
     position: sticky;
   } */
+
   #navbar{
     display: flex;
     justify-content: space-between;
@@ -68,6 +69,9 @@ a:link {
     width: 20%;
     /* border: 1px solid; */
   }
+  #part2>div:hover,.slider-container>div:hover{
+    transform: scale(1.1);
+  }
   a>div{
     position: relative;
   }
@@ -90,6 +94,65 @@ a:link {
 /* 3rd part */
 #part4,#part5{
   margin-top: 5%;
+}
+ 
+/* 6th part */
+.slider {
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slider-container {
+  display: flex;
+  gap: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slide {
+  width: 25%;
+  flex-shrink: 0;
+  background-color: #f5f5f5;
+}
+
+.slide img {
+  width: 100%;
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 30%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 40px;
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.prev-btn {
+  left: 0;
+}
+
+.next-btn {
+  right: 0;
+} 
+.slide>img~div{
+  padding: 0 25px 0 25px;
+}
+.slide>img~div h2{
+  font-size:28px;
+  text-align: left;
+}
+.slide>img~div p{
+  font-size: 18px;
+  text-align: left;
 }
 
 /* 7th part */
@@ -144,6 +207,13 @@ button{
   border-radius: 5px;
   height: 40px;
   width: 100px;
+}
+
+/* 11th part */
+#part11{
+  display: flex;
+  /* /* justify-content: center; */
+  gap: 30px; 
 }
 /* 12th part */
 #part12{

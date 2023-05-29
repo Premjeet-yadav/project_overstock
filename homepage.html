@@ -9,7 +9,7 @@
   </head>
   <body>
     <!-- header part -->
-    <header>
+    <!-- <header>
     <nav id="navbar">
       <div>
         <a href="">Furniture</a>
@@ -174,7 +174,7 @@
         <div></div>
       </div>
     </nav>
-  </header>
+  </header> -->
 
     <!-- 1st part-->
     <div
@@ -197,7 +197,9 @@
     <h1>Limited-Time Deals</h1>
     <div id="part2">
       <div>
-        <a href="C:\Users\user\OneDrive\masai\project overstock\project_overstock\product.html">
+        <a
+          href="C:\Users\user\OneDrive\masai\project overstock\project_overstock\product.html"
+        >
           <div>
             <img
               style="width: 100%"
@@ -458,7 +460,105 @@
 
     <!-- 6th part -->
     <h1>Trending This Season</h1>
-    <div id="part6"></div>
+    <div class="slider">
+      <div class="slider-container">
+        <div class="slide">
+          <img
+            src="	https://ak1.ostkcdn.com/img/mxc/05172023_Home_Page_Editorial_1a.jpg?imwidth=2048
+          "
+            alt="Image 1"
+          />
+          <div>
+            <h2>Outdoor Chaise Lounges</h2>
+            <p>Relax outside and soak up the sun on a chic chaise lounge.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img
+            src="https://ak1.ostkcdn.com/img/mxc/05172023_Home_Page_Editorial_2a.jpg?imwidth=2048"
+            alt="Image 2"
+          />
+          <div>
+            <h2>Out Dining Sets</h2>
+            <p>Take meals outside and make the most of sunny summer days.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img
+            src="https://ak1.ostkcdn.com/img/mxc/05172023_Home_Page_Editorial_3a.jpg?imwidth=2048"
+            alt="Image 3"
+          />
+          <div>
+            <h2>Summer Lawn Games</h2>
+            <p>Enjoy family fun in the sun with outdoor lawn games.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img
+            src="https://ak1.ostkcdn.com/img/mxc/05172023_Home_Page_Editorial_4a.jpg?imwidth=2048"
+            alt="Image 4"
+          />
+          <div>
+            <h2>Father's Day Gifts</h2>
+            <p>Grills, games, tools, and more to make your dad's day.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img
+            src="https://ak1.ostkcdn.com/img/mxc/05172023_Home_Page_Editorial_5.jpg?imwidth=2048"
+            alt="Image 7"
+          />
+          <div>
+            <h2>Small Space Furniture</h2>
+            <p>
+              From storage ottomans to Murphy beds, this furniture makes the
+              most of any space.
+            </p>
+          </div>
+        </div>
+        <div class="slide">
+          <img
+            src="https://ak1.ostkcdn.com/img/mxc/05172023_Home_Page_Editorial_6.jpg?imwidth=2048"
+            alt="Image 8"
+          />
+          <div>
+            <h2>Outdoor Hanging Chairs</h2>
+            <p>
+              Relax outside and sway in the summer breeze with a cozy hanging
+              chair.
+            </p>
+          </div>
+        </div>
+        <div class="slide">
+          <img
+            src="https://ak1.ostkcdn.com/img/mxc/05172023_Home_Page_Editorial_7.jpg?imwidth=2048"
+            alt="Image 9"
+          />
+          <div>
+            <h2>Breezy Outdoor Curtains</h2>
+            <p>
+              Create a cool, airy ambiance and add some privacy to your patio
+              space.
+            </p>
+          </div>
+        </div>
+        <div class="slide">
+          <img
+            src="https://ak1.ostkcdn.com/img/mxc/05172023_Home_Page_Editorial_8.jpg?imwidth=2048"
+            alt="Image 10"
+          />
+          <div>
+            <h2>Indoor & Outdoor</h2>
+            <p>
+              Showcase your summer greenery in style with planters for every
+              space.
+            </p>
+          </div>
+        </div>
+      </div>
+      <button  class="prev-btn">&#8249;</button>
+      <button  class="next-btn"><i>&#8250;</i></button>
+    </div>
 
     <!-- 7th part -->
     <h1>Overstock Featured Brands</h1>
@@ -636,10 +736,13 @@
 
     <!-- 11th part -->
     <nav id="part11">
+      <div style="display: flex; align-items: center;margin-right: -15%;">
+        <img src="	https://ak1.ostkcdn.com/img/mxc/7722_EmailCoupon.svg" alt="discounticon">
+      </div>
       <div>
         <h2>Take 10% Off Today*</h2>
         <p>
-          Plus, get exclusive offers & savings!
+          Plus, get exclusive offers & savings! <br>
           <span style="font-size: small"
             >*Some Exclusions Apply.
             <a
@@ -650,7 +753,7 @@
           >
         </p>
       </div>
-      <div style="display: flex; align-items: center; gap: 5px">
+      <div style="display: flex; align-items: center; gap:5px">
         <input type="email" value="Your Email Adress" /><input
           type="submit"
           value="Sign Up"
@@ -780,3 +883,34 @@
     </footer>
   </body>
 </html>
+<script>
+  const slider = document.querySelector('.slider');
+const sliderContainer = document.querySelector('.slider-container');
+const slides = document.querySelectorAll('.slide');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+
+const slideWidth = slides[0].offsetWidth;
+let slideIndex = 0;
+
+prevBtn.addEventListener('click', () => {
+  slideIndex--;
+  if (slideIndex < 0) {
+    slideIndex = slides.length - 5;
+  }
+  updateSliderPosition();
+});
+
+nextBtn.addEventListener('click', () => {
+  slideIndex++;
+  if (slideIndex >= slides.length - 4) {
+    slideIndex = 0;
+  }
+  updateSliderPosition();
+});
+
+function updateSliderPosition() {
+  const translateXValue = -slideIndex * slideWidth;
+  sliderContainer.style.transform = `translateX(${translateXValue}px)`;
+}
+</script>
