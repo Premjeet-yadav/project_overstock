@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.cdnfonts.com/css/helvetica-neue-9" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <script src="https://kit.fontawesome.com/4db740c557.js" crossorigin="anonymous"></script>
+</head>
+<style>
+	
+body {
+    font-family: HelveticaNeue,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.top_Signup_container{
+    height: 110px;
+    background-color: #2f3337;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.top_coupon_form_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 75px;
+    
+}
+.top_coupon_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top_coupon_ptag{
+    color: #fff;
+    margin: 0 10px 0 0;
+}
+.top_arrowhead{
+    transform: rotate(.5turn);
+
+}
+.top_banner_form_terms{
+    box-sizing: border-box;
+    
+}
+.top_banner_form{
+    display: flex;
+    
+}
+.top_banner_form_a , .top_banner_form_span{
+    color: #fff;
+    font-size: 12px;
+}
+.top_banner_form_a+span{
+    margin: 0 5px;
+}
+.top_banner_form > input{
+    height: 34px;
+    border-radius: 3px 0 0 3px;
+    border: 1px solid #dadcdf;
+    border-right: none;
+    flex: 1;
+    padding-left: 10px;
+    font-size: 14px;
+}
+.top_banner_form > button{
+    height: 37.6px;
+    border-radius: 0 3px 3px 0;
+    border: 1px solid #dadcdf;
+    border-left: none;
+    padding: 0 10px;
+    width: 80px;
+    background-color: #f5f6f7;
+    font-size: 14px;
+    color: #2f3337;
+}
+
+.header_navbar{
+    position: relative;
+    z-index: 3;
+    background-color: white;
+}
+.header_divider{
+    background-color: #fff;
+    border-top: 1px solid #dadcdf;
+    height: 6px;
+    width: 100%;
+}
+.search_header{
+    display: flex;
+    justify-content: space-between;
+    height: 36px;
+    align-items: center;
+    padding: 0 16px;
+    max-width: 1680px;
+    margin: 18px auto;
+    background-color: #fff;
+}
+.overstock_logo{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 10%;
+    margin-right: 10px;
+}
+.overstock_logo > img{
+    width: 100%;
+}
+
+.header_search{
+    flex-grow: 1;
+    height: 34px;
+    margin-right: 12px;
+}
+.nav_search{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.input_search{
+    border: 1px solid #dadcdf;
+    border-radius: 4px 0 0 4px;
+    background-color: #f9fafb;
+    padding: 0 10px;
+    font-size: 16px;
+    appearance: none;
+    line-height: 34px;
+    width: 100%;
+    height: 100%;
+}
+.search_div{
+    width: 100%;
+    height: 100%;
+}
+.user-interfrence{
+    display: flex;
+    width: 10%;
+}
+.user_int_logo{
+    width: 33%;
+    margin-left: 30px;
+}
+.topnav-contain{
+    width: 100%;
+    height: 34px;
+    padding-bottom: 0;
+    border-top: 1px solid #dadcdf;
+}
+.topnav-links{
+    max-width: 1680px;
+    margin: 0 auto;
+    margin-bottom: -2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 16px;
+    background-color: #fff;
+}
+.topnav-links > div{
+    box-sizing: border-box;
+}
+.topnav_links_sign{
+    height: 18px;
+    width: 1px;
+    background-color: #dadcdf;
+    margin: auto 6px;
+}
+.magnifine{
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .shopping-cart-text {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0;
+    margin-top : 22px; 
+    margin-bottom : 22px; 
+  }
+
+  .cart-body {
+    width: 1240px;
+    margin: auto;
+  }
+
+  .left-right {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .top , .bottom {
+    border: 1px solid #dadcdf;
+    margin-left: 8px;
+  }
+
+  .top {
+    height: 100px;
+    width: 300px;
+    margin-bottom: 8px;
+  }
+
+  .top {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    transition: margin .2s;
+  }
+  .top > div{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .top > div > input{
+    width: 50%;
+    height: 10px;
+    font-size: 15px;
+    padding: 16px 17px;
+    margin-top: 10px;
+  }
+  .top > div > button{
+    background: transparent;
+    border: 1px solid grey;
+    width: 30%;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .top > div > button:hover{
+   background-color: #f9fafb;
+  }
+  .bottom {
+        height: 120px;
+        width: 300px;
+  }
+
+  .bottom-button {
+    margin-top: 16px;
+    font-size: 16px;
+    height: 44px;
+    background-color: #2f3337;
+    color: #fff;
+    width: 80%;
+    margin: 0 30px;
+    margin-top: 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+  }
+
+  .bottom-top {
+    padding: 20px;
+    padding-bottom: 0;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.75;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .left{
+    width: 930px;
+    border: 1px solid #dadcdf;
+    margin-bottom: 32px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .empty-cart {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+
+  #item {
+    width: 880px;
+    height: 246px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+    padding: 20px;
+    border: 1px solid #dadcdf;
+  }
+
+  #image {
+    height: 260px;
+    width: 260px;
+  }
+
+  #item-right-div {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 10px;
+  }
+
+  #info {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1.2;
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+
+  #price {
+    color: #c7202c;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+  }
+
+  #remove {
+    text-decoration: underline;
+    border: none;
+    background-color: white;
+    text-align: left;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .footer{
+    background-color: #545658;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 0;
+}
+.footer-container{
+    display: flex;
+    margin: 40px 50px 60px;
+    width: 100%;
+    justify-content: space-between;
+
+}
+.footer-container-div{
+    width: 100%;
+    margin-bottom: 5px;
+    color: #fff;
+    box-sizing: border-box;
+    
+}
+.footer-col{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+   margin: 5px;
+   box-sizing: border-box;
+   
+}
+.footer-col a{
+    text-decoration: none;
+   
+}
+.footer-col div{
+    font-weight: 700;
+    width: 100%;
+    font-size: 12px;
+    font-weight: bold;
+}
+.footer-col p{
+    font-size: 12px;
+    width: 100%;
+    color: #fff;
+}
+.bottom-footer{
+    display: flex;
+    background-color: #2f3337;
+    align-content: center;
+}
+.bottom-footer-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+font-size: 12px;
+    width: 100%;
+    color: #fff;
+    
+}
+.bottom-footer-link{
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+    margin: 10px 30px 10px 10px;
+    width: 450px;
+    
+}
+.bottom-footer-link a{
+    text-decoration: none;
+}
+.bottom-copy{
+    margin: 10px 10px 10px 30px;
+}
+.footer-p{
+    color: #fff;
+}
+p{
+	text-align: center;
+}
+
+</style>
+<body>
+    
+        <div class="cart-body">
+            <h1 class="shopping-cart-text">Shopping Cart</h1>
+            <div class="left-right">
+                <div class="left" id="container"></div>
+                <div class="right">
+                    <div class="top">
+                        <span class="top-text">Add a Promo Code</span>
+                        <div>
+                            <input id="promoinput" placeholder="Enter Promo Code" type="text">
+                            <button id="promobutton">Apply</button>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="bottom-top">
+                            <span id="total-cost">Your Total</span>
+                            <span id="PromoTotal">INR 0.00</span>
+                        </div>
+                        <button class="bottom-button">Continue Shopping</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="cart.js"></script>
+<Script>
+	  var  data = [
+    {
+        image : "https://ak1.ostkcdn.com/images/products/is/images/direct/b218135cd895308603443f768e318c6cc0491386/HomCom-Faux-Leather-Adjustable-Manual-Swivel-Base-Recliner-Chair-with-Comfortable-and-Relaxing-Footrest.jpg?imwidth=480&impolicy=medium",
+        details : "HomCom Leather Adjustable Manual Base Recliner Chair with Comfortable and Relaxing Footrest",
+       MRP: 27893,
+        
+    },
+	{
+        image : "https://ak1.ostkcdn.com/images/products/is/images/direct/b218135cd895308603443f768e318c6cc0491386/HomCom-Faux-Leather-Adjustable-Manual-Swivel-Base-Recliner-Chair-with-Comfortable-and-Relaxing-Footrest.jpg?imwidth=480&impolicy=medium",
+        details : "HomCom Leather Adjustable Manual Base Recliner Chair with Comfortable and Relaxing Footrest",
+       MRP: 27893,
+        
+    },
+    {
+        image : "https://ak1.ostkcdn.com/images/products/is/images/direct/b218135cd895308603443f768e318c6cc0491386/HomCom-Faux-Leather-Adjustable-Manual-Swivel-Base-Recliner-Chair-with-Comfortable-and-Relaxing-Footrest.jpg?imwidth=480&impolicy=medium",
+        details : "HomCom Leather Adjustable Manual Base Recliner Chair with Comfortable and Relaxing Footrest",
+       MRP: 27893,
+        
+    },
+    {
+        image : "https://ak1.ostkcdn.com/images/products/is/images/direct/7f888bddbef2995649425836903dbfb1006280c0/Copper-Grove-Cranesbill-Mudroom-Shoe-Storage-Bench.jpg?imwidth=480&impolicy=medium",
+        details : "Copper Grove Cranesbill Mudroom Shoe Storage Bench",
+        MRP : 7464,
+        
+    },
+      {
+        image : "https://ak1.ostkcdn.com/images/products/is/images/direct/dc34ab1e5cb72f582555c3ea76b7c82cad2024c2/Porch-%26-Den-Holly-Hill-Solid-Acacia-Recliner-End-Table.jpg?imwidth=480&impolicy=medium",
+        details : "Porch & Den Holly Hill Solid Acacia Recliner End Table",
+        MRP : 8228,
+        
+    },
+]   //JSON.parse(localStorage.getItem("add-items")) || []
+showItems(data)
+var totalPrice = 0
+function showItems(data){
+    document.querySelector("#container").textContent = ""
+    data.map(function(Element, index){
+        var img = document.createElement("img")
+        img.setAttribute("src", Element.image)
+        img.setAttribute("id", "image")
+        var info = document.createElement("p")
+        info.textContent = Element.details
+        info.setAttribute("id", "info")
+        var price = document.createElement("p")
+        price.textContent = Element.MRP
+        price.setAttribute("id", "price")
+        var remove = document.createElement("button")
+        remove.textContent = "Remove Item"
+        remove.setAttribute("id", "remove")
+        remove.addEventListener("click", function(){
+            removeItem(Element, index)
+        })
+        var rightdiv = document.createElement("div")
+        rightdiv.setAttribute("id", "item-right-div")
+        rightdiv.append(info, price, remove)
+        var items = document.createElement("div")
+        items.setAttribute("id", "item")
+        items.append(img, rightdiv)
+        document.querySelector("#container").append(items)
+    })
+    function removeItem(Element, index){
+        data.splice(index, 1)
+        localStorage.setItem("add-items", JSON.stringify(data))
+        showItems(data)
+    }
+    var c = function(acc, element){
+        return acc + element.MRP
+    }
+    var price = data.reduce (c,0)
+    document.getElementById("total-cost").textContent = "INR " + price
+    localStorage.setItem("total-cost", JSON.stringify(price))
+}
+
+
+</Script>
+</html>
