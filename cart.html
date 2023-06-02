@@ -434,8 +434,9 @@ p{
                         <div class="bottom-top">
                             <span id="total-cost">Your Total</span>
                             <span id="PromoTotal">INR 0.00</span>
+                            
                         </div>
-                        <button class="bottom-button">Continue Shopping</button>
+                        <button class="bottom-button">Check Out</button>
                     </div>
                 </div>
             </div>
@@ -445,77 +446,82 @@ p{
 </body>
 <script src="cart.js"></script>
 <Script>
-	  var  data = [
-    {
-        image : "https://ak1.ostkcdn.com/images/products/is/images/direct/b218135cd895308603443f768e318c6cc0491386/HomCom-Faux-Leather-Adjustable-Manual-Swivel-Base-Recliner-Chair-with-Comfortable-and-Relaxing-Footrest.jpg?imwidth=480&impolicy=medium",
-        details : "HomCom Leather Adjustable Manual Base Recliner Chair with Comfortable and Relaxing Footrest",
-       MRP: 27893,
-        
-    },
-	{
-        image : "https://ak1.ostkcdn.com/images/products/is/images/direct/b218135cd895308603443f768e318c6cc0491386/HomCom-Faux-Leather-Adjustable-Manual-Swivel-Base-Recliner-Chair-with-Comfortable-and-Relaxing-Footrest.jpg?imwidth=480&impolicy=medium",
-        details : "HomCom Leather Adjustable Manual Base Recliner Chair with Comfortable and Relaxing Footrest",
-       MRP: 27893,
-        
-    },
-    {
-        image : "https://ak1.ostkcdn.com/images/products/is/images/direct/b218135cd895308603443f768e318c6cc0491386/HomCom-Faux-Leather-Adjustable-Manual-Swivel-Base-Recliner-Chair-with-Comfortable-and-Relaxing-Footrest.jpg?imwidth=480&impolicy=medium",
-        details : "HomCom Leather Adjustable Manual Base Recliner Chair with Comfortable and Relaxing Footrest",
-       MRP: 27893,
-        
-    },
-    {
-        image : "https://ak1.ostkcdn.com/images/products/is/images/direct/7f888bddbef2995649425836903dbfb1006280c0/Copper-Grove-Cranesbill-Mudroom-Shoe-Storage-Bench.jpg?imwidth=480&impolicy=medium",
-        details : "Copper Grove Cranesbill Mudroom Shoe Storage Bench",
-        MRP : 7464,
-        
-    },
-      {
-        image : "https://ak1.ostkcdn.com/images/products/is/images/direct/dc34ab1e5cb72f582555c3ea76b7c82cad2024c2/Porch-%26-Den-Holly-Hill-Solid-Acacia-Recliner-End-Table.jpg?imwidth=480&impolicy=medium",
-        details : "Porch & Den Holly Hill Solid Acacia Recliner End Table",
-        MRP : 8228,
-        
-    },
-]   //JSON.parse(localStorage.getItem("add-items")) || []
-showItems(data)
-var totalPrice = 0
-function showItems(data){
-    document.querySelector("#container").textContent = ""
-    data.map(function(Element, index){
-        var img = document.createElement("img")
-        img.setAttribute("src", Element.image)
-        img.setAttribute("id", "image")
-        var info = document.createElement("p")
-        info.textContent = Element.details
-        info.setAttribute("id", "info")
-        var price = document.createElement("p")
-        price.textContent = Element.MRP
-        price.setAttribute("id", "price")
-        var remove = document.createElement("button")
-        remove.textContent = "Remove Item"
-        remove.setAttribute("id", "remove")
-        remove.addEventListener("click", function(){
-            removeItem(Element, index)
-        })
-        var rightdiv = document.createElement("div")
-        rightdiv.setAttribute("id", "item-right-div")
-        rightdiv.append(info, price, remove)
-        var items = document.createElement("div")
-        items.setAttribute("id", "item")
-        items.append(img, rightdiv)
-        document.querySelector("#container").append(items)
-    })
-    function removeItem(Element, index){
-        data.splice(index, 1)
-        localStorage.setItem("add-items", JSON.stringify(data))
-        showItems(data)
+	var data  = JSON.parse(localStorage.getItem("cartData")) || [];
+
+ //JSON.parse(localStorage.getItem("add-items")) || []
+
+showItems(data);
+
+function showItems(data) {
+  document.querySelector("#container").textContent = "";
+
+  data.forEach(function (Element, index) {
+    var img = document.createElement("img");
+    img.setAttribute("src", Element.img_url
+);
+    img.setAttribute("id", "image");
+
+    var info = document.createElement("p");
+    info.textContent = Element.name;
+    info.setAttribute("id", "info");
+
+    var price = document.createElement("p");
+    price.textContent ="INR "+Element.price;
+    price.setAttribute("id", "price");
+
+    var remove = document.createElement("button");
+    remove.textContent = "Remove Item";
+    remove.setAttribute("id", "remove");
+    remove.addEventListener("click", function () {
+      removeItem(Element, index);
+    });
+
+    var select = document.createElement("select");
+    select.setAttribute("data-index", index);
+    select.addEventListener("change", function () {
+      calculateTotalPrice();
+    });
+
+    for (var i = 1; i <= 5; i++) {
+      var option = document.createElement("option");
+      option.text = i;
+      option.value = i;
+      select.appendChild(option);
     }
-    var c = function(acc, element){
-        return acc + element.MRP
-    }
-    var price = data.reduce (c,0)
-    document.getElementById("total-cost").textContent = "INR " + price
-    localStorage.setItem("total-cost", JSON.stringify(price))
+
+    var rightdiv = document.createElement("div");
+    rightdiv.setAttribute("id", "item-right-div");
+    rightdiv.append(info, price, select, remove);
+
+    var items = document.createElement("div");
+    items.setAttribute("id", "item");
+    items.append(img, rightdiv);
+
+    document.querySelector("#container").append(items);
+  });
+
+  calculateTotalPrice();
+}
+
+function removeItem(Element, index) {
+  data.splice(index, 1);
+  localStorage.setItem("add-items", JSON.stringify(data));
+  showItems(data);
+}
+
+function calculateTotalPrice() {
+  var totalPrice = 0;
+
+  var selectElements = document.querySelectorAll("#item-right-div select");
+  selectElements.forEach(function (selectElement) {
+    var index = selectElement.getAttribute("data-index");
+    var quantity = parseInt(selectElement.value);
+    var itemPrice = data[index].price;
+    totalPrice += itemPrice * quantity;
+  });
+
+  document.getElementById("total-cost").textContent = "INR " + totalPrice;
+  localStorage.setItem("total-cost", JSON.stringify(totalPrice));
 }
 
 
