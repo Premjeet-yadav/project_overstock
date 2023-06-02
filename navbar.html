@@ -32,13 +32,14 @@
       flex-grow: 1;
       display: flex;
       align-items: center;
-      margin: 0 10px;
+      margin: 0 10px; /* Updated margin values */
     }
 
     .search-box input {
       flex-grow: 1;
       padding: 5px;
       height: 10px;
+      width: 100%; /* Added width property */
     }
 
     .search-box .search-icon {
@@ -70,13 +71,13 @@
 
     .description-popup {
       display: none;
-      position: absolute;
+      position:absolute;
       top: 100%;
       left: 0;
       width: 100%;
-      background-color: #f1f1f1;
-      padding: 10px;
-      z-index: 1;
+      background-color:white;
+    
+    
     }
 
     .category:hover .description-popup {
@@ -91,7 +92,7 @@
       flex: 1;
       padding: 10px;
     }
-    .navbar {
+    .categories {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -118,8 +119,8 @@
 
 /* Media queries for responsive design */
 
-@media (max-width: 768px) {
-  .navbar {
+/* @media (max-width: 768px) {
+  .categories {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -132,7 +133,12 @@
   .container {
     justify-content: flex-start;
   }
-}
+} */
+ @media  (max-width:600px) {
+  .categories{
+        display: none;
+      }
+    } 
 
     
   </style>
@@ -177,7 +183,7 @@
                 <p>Recliners</p>
                 <p>Coffee and Accent Tables</p>
                 <p>TV Stands</p>
-                <p>Best Sellers</p>
+              
               </div>
               <div class="description-column">
                 <p>Bedroom Furniture</p>
