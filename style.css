@@ -8,7 +8,7 @@
     position: sticky;
   } */
 
-  #navbar{
+  /* #navbar{
     display: flex;
     justify-content: space-between;
     height: 30px;
@@ -40,7 +40,123 @@
   .megadropcolumn:last-child ul li{
   font-weight: bold;
   color: #cf3d43;
+  } */
+
+  header {
+    background-color: #f1f1f1;
   }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo a {
+    display: inline-block;
+  }
+
+  .logo img {
+    height: 30px;
+  }
+
+  .search-box {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    margin: 0 10px; /* Updated margin values */
+  }
+
+  .search-box input {
+    flex-grow: 1;
+    padding: 5px;
+    height: 10px;
+    width: 100%; /* Added width property */
+  }
+
+  .search-box .search-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: center;
+    display: block;
+  }
+
+  .icon {
+    color: #0a0808;
+    font-size: 18px;
+    margin: 0 5px;
+    display: block;
+  }
+
+  .categories {
+    display: flex;
+  }
+
+  .category {
+    margin: 0 20px;
+    position: relative;
+  
+  }
+
+  .description-popup {
+    display: none;
+    position:absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color:white;
+  
+  
+  }
+
+  .category:hover .description-popup {
+    display: block;
+  }
+
+  .description-section {
+    display: flex;
+  }
+
+  .description-column {
+    flex: 1;
+    padding: 10px;
+  }
+  .categories {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px;
+}
+
+.logo {
+flex: 1;
+/* Logo styling */
+}
+
+.container {
+flex: 1;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+}
+
+.container a {
+text-decoration: none;
+color: #333;
+margin-left: 20px;
+}
+
+@media  (max-width:600px) {
+  .categories{
+        display: none;
+      }
+    } 
+
   ul li{
     list-style-type: none;
     line-height: 25px;
@@ -61,13 +177,9 @@ a:link {
 
 /* 2nd part */
   #part2{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
     gap: 20px;
-  }
-  #part2>div{
-    /* height: 300px; */
-    width: 20%;
-    /* border: 1px solid; */
   }
   #part2>div:hover,.slider-container>div:hover{
     transform: scale(1.1);
@@ -236,4 +348,31 @@ background-color:#2f3337;
 .footersec p{
 color: white;
 text-align: left;
+}
+
+@media only screen and (max-width: 800px){
+  body{
+    width: 100%;
+  }
+  #part2,#part3{
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+  }
+  #part10{
+    display: grid;
+   grid-template-columns: repeat(2,1fr);
+  }
+  #part11,.footersec{
+    flex-direction: column;
+    align-items: center;
+  }
+  .footersec{
+    display: none;
+  }
+  #parentbox{
+    width: 100%;
+  }
+  #part11 img,#part11>div:nth-child(2){
+    margin-bottom: -35px;
+  }
 }
