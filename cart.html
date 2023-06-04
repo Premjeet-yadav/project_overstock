@@ -433,10 +433,11 @@ p{
                     <div class="bottom">
                         <div class="bottom-top">
                             <span id="total-cost">Your Total</span>
-                            <span id="PromoTotal">INR 0.00</span>
+                          
                             
                         </div>
-                        <button class="bottom-button">Check Out</button>
+                        
+                        <a href="payment_and_address.html"><button class="bottom-button">Check Out</button></a>
                     </div>
                 </div>
             </div>
@@ -477,6 +478,7 @@ function showItems(data) {
     });
 
     var select = document.createElement("select");
+    select.style= "width:40px";
     select.setAttribute("data-index", index);
     select.addEventListener("change", function () {
       calculateTotalPrice();
@@ -484,6 +486,7 @@ function showItems(data) {
 
     for (var i = 1; i <= 5; i++) {
       var option = document.createElement("option");
+     
       option.text = i;
       option.value = i;
       select.appendChild(option);
