@@ -95,7 +95,22 @@ form.addEventListener('submit', handleSubmit);
       } else {
         alert("Invalid OTP");
       }
-
+ 
    
     }
-            
+
+ // Retrieve the value from the "total-cost" key in local storage
+ var totalCost = localStorage.getItem("total-cost");
+console.log(totalCost);
+
+var orderSummaryElement = document.getElementById("totalamt");
+if (totalCost !== null) {
+  var parsedTotalCost = JSON.parse(totalCost);
+  orderSummaryElement.textContent = "₹ "+parsedTotalCost;
+} else {
+  orderSummaryElement.textContent = "Total cost not found in local storage.";
+}
+
+
+
+           
