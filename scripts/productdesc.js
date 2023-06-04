@@ -28,8 +28,8 @@ function displayproduct(){
         // coupon_img.src = "https://png.pngtree.com/element_our/20190528/ourmid/pngtree-50--coupon-icon-image_1144359.jpg";
         coupan_div.append(coupan_desc);
         var btn = document.createElement("button");
-    var rating = document.createElement("div");
-    rating.classList.add("rating");
+        var rating = document.createElement("div");
+        rating.classList.add("rating");
 
     // Create and append the star icons based on the rating
     for (var i = 1; i <= 5; i++) {
@@ -61,7 +61,7 @@ function addToCart(product){
     
       if (existingProduct) {
         // Product already exists in the cart
-        showPopup(existingProduct);
+        showPopup1(existingProduct);
       } else {
         // Product doesn't exist in the cart, add it with quantity 1
         product.quantity = 1;
@@ -70,9 +70,9 @@ function addToCart(product){
       }
 }
 
-function showPopup(product) {
-    var popup = document.createElement("div");
-    popup.classList.add("popup");
+function showPopup1(product) {
+    var popup1 = document.createElement("div");
+    popup1.classList.add("popup1");
   
     var message = document.createElement("p");
     message.textContent =
@@ -87,11 +87,11 @@ function showPopup(product) {
     var cancelBtn = document.createElement("button");
     cancelBtn.textContent = "Cancel";
     cancelBtn.addEventListener("click", function() {
-      closePopup();
+      closePopup1();
     });
   
-    popup.append(message, quantityIncreaseBtn, cancelBtn);
-    document.body.appendChild(popup);
+    popup1.append(message, quantityIncreaseBtn, cancelBtn);
+    document.body.appendChild(popup1);
   }
   
   function increaseQuantity(product) {
@@ -99,10 +99,10 @@ function showPopup(product) {
     saveCartDataAndRedirect();
   }
   
-  function closePopup() {
-    var popup = document.querySelector(".popup");
-    if (popup) {
-      popup.remove();
+  function closePopup1() {
+    var popup1 = document.querySelector(".popup1");
+    if (popup1) {
+      popup1.remove();
     }
   }
   
@@ -111,3 +111,13 @@ function showPopup(product) {
     window.location.href = "cart.html";
   }
 
+  document.addEventListener("DOMContentLoaded", function() {
+    var loginLogo = document.getElementById("login-logo");
+    loginLogo.addEventListener("click", function() {
+      window.location.href = "login.html";
+    });
+    var cartref = document.getElementById("cart-logo");
+    cartref.addEventListener("click",function(){
+      window.location.href = "cart.html"
+    })
+  });

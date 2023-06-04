@@ -1,7 +1,99 @@
 body{
     font-family: 'Arial';
 }
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  header {
+    background-color: #f1f1f1;
+    padding: 10px;
+  }
 
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo a {
+    display: inline-block;
+  }
+
+  .logo img {
+    height: 30px;
+  }
+
+  .search-box {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+  }
+
+  .search-box input {
+    flex-grow: 1;
+    padding: 5px;
+    height: 10px;
+    width: 100%;
+  }
+
+  .search-box .search-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .icon {
+    color: #0a0808;
+    font-size: 18px;
+    margin: 0 5px;
+  }
+
+  .categories {
+    display: flex;
+  }
+
+  .category {
+    margin: 0 20px;
+    position: relative;
+  }
+
+  .description-popup {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    padding: 10px;
+    z-index: 2;
+  }
+
+  .category:hover .description-popup {
+    display: block;
+  }
+
+  .description-section {
+    display: flex;
+  }
+
+  .description-column {
+    flex: 1;
+    padding: 10px;
+  }
+
+  @media (max-width: 700px) {
+    .categories {
+      display: none;
+    }
+  }
 /* saperate */
 #parent{
     /* margin: 10%; */

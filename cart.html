@@ -10,11 +10,100 @@
     <script src="https://kit.fontawesome.com/4db740c557.js" crossorigin="anonymous"></script>
 </head>
 <style>
-	
-body {
-    font-family: HelveticaNeue,Helvetica Neue,Helvetica,Arial,sans-serif;
-}
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    header {
+      background-color: #f1f1f1;
+      padding: 10px;
+    }
 
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo a {
+      display: inline-block;
+    }
+
+    .logo img {
+      height: 30px;
+    }
+
+    .search-box {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      margin: 0 10px;
+    }
+
+    .search-box input {
+      flex-grow: 1;
+      padding: 5px;
+      height: 10px;
+      width: 100%;
+    }
+
+    .search-box .search-icon {
+      width: 20px;
+      height: 20px;
+      margin-left: 10px;
+    }
+
+    .icons {
+      display: flex;
+      justify-content: center;
+    }
+
+    .icon {
+      color: #0a0808;
+      font-size: 18px;
+      margin: 0 5px;
+    }
+
+    .categories {
+      display: flex;
+    }
+
+    .category {
+      margin: 0 20px;
+      position: relative;
+    }
+
+    .description-popup {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      padding: 10px;
+      z-index: 2;
+    }
+
+    .category:hover .description-popup {
+      display: block;
+    }
+
+    .description-section {
+      display: flex;
+    }
+
+    .description-column {
+      flex: 1;
+      padding: 10px;
+    }
+
+    @media (max-width: 700px) {
+      .categories {
+        display: none;
+      }
+    }
+    /* navbaar css ends here */
 .top_Signup_container{
     height: 110px;
     background-color: #2f3337;
@@ -417,7 +506,96 @@ p{
 
 </style>
 <body>
-    
+  <header>
+    <nav>
+      <div class="container">
+        <div class="logo">
+          <a href="index.html"><img src="https://logos-download.com/wp-content/uploads/2017/01/Overstock_logo.png" alt="Logo"></a>
+        </div>
+        <div class="search-box">
+          <input type="text" placeholder="Search for products, services, etc.">
+          <img src="https://th.bing.com/th/id/R.cdab85a392e92623afa27de32443379f?rik=0RkIkX%2bdiSIFZA&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fsearch-button-png-search-icon-this-icon-is-supposed-to-represent-a-magnifying-glass-it-s-a-large-png-50-px-1600.png&ehk=grlbuyhad%2bYRRqy5sfjRfmWOEHvzxlyha5HDmdw0wtE%3d&risl=&pid=ImgRaw&r=0" alt="Search Icon" class="search-icon">
+        </div>
+        <div class="icons">
+          <div class="icon">
+            <i id="login-logo" class="far fa-user-circle"></i>
+          </div>
+          <div class="icon">
+            <i class="far fa-heart"></i>
+          </div>
+          <div class="icon">
+            <i id="cart-logo" class="fas fa-shopping-cart"></i>
+          </div>
+        </div>
+      </div>
+      <div class="categories">
+        <div class="category">
+          <p>Furniture</p>
+          <div class="description-popup">
+            <div class="description-section">
+              <div class="description-column">
+                <p>Living Room Furniture</p>
+                <p>Sofas and Couches</p>
+                <p>Sectionals</p>
+                <p>Benches</p>
+                <p>Ottomans and Poufs</p>
+              </div>
+              <div class="description-column">
+                <p>Accent Chairs</p>
+                <p>Recliners</p>
+                <p>Coffee and Accent Tables</p>
+                <p>TV Stands</p>
+              
+              </div>
+              <div class="description-column">
+                <p>Bedroom Furniture</p>
+                <p>Beds</p>
+                <p>Bedroom Sets</p>
+                <p>Headboards</p>
+                <p>Bed Frames</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="category">
+          <p>Outdoor</p>
+        </div>
+        <div class="category">
+            <p>rugs</p>
+          </div>
+          <div class="category">
+            <p>Decor</p>
+          </div>
+          <div class="category">
+            <p>Bedding</p>
+          </div>
+          <div class="category">
+            <p>Improvement</p>
+          </div>
+          <div class="category">
+            <p>Kitchen</p>
+          </div>
+          <div class="category">
+            <p>Lighting</p>
+          </div>
+          <div class="category">
+            <p>Kids</p>
+          </div>
+          <div class="category">
+            <p>Bath</p>
+          </div>
+          <div class="category">
+            <p>More</p>
+          </div>
+          <div class="category">
+            <p>Ideas</p>
+          </div>
+          <div class="category">
+            <p>Sales and Deals</p>
+          </div>
+      </div>
+    </nav>
+  </header>
         <div class="cart-body">
             <h1 class="shopping-cart-text">Shopping Cart</h1>
             <div class="left-right">
@@ -523,7 +701,16 @@ function calculateTotalPrice() {
   document.getElementById("total-cost").textContent = "INR " + totalPrice;
   localStorage.setItem("total-cost", JSON.stringify(totalPrice));
 }
-
+document.addEventListener("DOMContentLoaded", function() {
+      var loginLogo = document.getElementById("login-logo");
+      loginLogo.addEventListener("click", function() {
+        window.location.href = "login.html";
+      });
+      var cartref = document.getElementById("cart-logo");
+      cartref.addEventListener("click",function(){
+        window.location.href = "cart.html"
+      })
+    });
 
 </Script>
 </html>
