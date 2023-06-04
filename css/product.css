@@ -1,7 +1,99 @@
 body{
     font-family: 'Arial';
 }
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  header {
+    background-color: #f1f1f1;
+    padding: 10px;
+  }
 
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo a {
+    display: inline-block;
+  }
+
+  .logo img {
+    height: 30px;
+  }
+
+  .search-box {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+  }
+
+  .search-box input {
+    flex-grow: 1;
+    padding: 5px;
+    height: 10px;
+    width: 100%;
+  }
+
+  .search-box .search-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .icon {
+    color: #0a0808;
+    font-size: 18px;
+    margin: 0 5px;
+  }
+
+  .categories {
+    display: flex;
+  }
+
+  .category {
+    margin: 0 20px;
+    position: relative;
+  }
+
+  .description-popup {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    padding: 10px;
+    z-index: 2;
+  }
+
+  .category:hover .description-popup {
+    display: block;
+  }
+
+  .description-section {
+    display: flex;
+  }
+
+  .description-column {
+    flex: 1;
+    padding: 10px;
+  }
+
+  @media (max-width: 700px) {
+    .categories {
+      display: none;
+    }
+  }
 /* saperate */
 #parent{
     /* margin: 10%; */
@@ -23,8 +115,11 @@ body{
 #price{
     font-style: bold;
 }
-img{
+/* #parent>div>img{
     width: 100%;
+} */
+.product_image{
+    width:100%;
 }
 #sort_drop{
     display: flex;
@@ -65,73 +160,83 @@ img{
     }
 
     /* footer section css start here  */
-    #footer{
-        margin-top: 30px;
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-        padding: 50px 0px 0px 100px;
-        background-color: rgb(84,86,88);
-        height: 300px;
-        
-    }
-    #footer>div{
-        /* border: 1px solid; */
-        text-align: left;
-         display: flex;
-         flex-direction: column;
-         gap: 20px;
-        
-    }
-    #footer>div>h4{
-        color: rgb(248,245,244) ;
-        font-size: 14px;
-        font-weight:700;
-        font-family:"Times New Roman";
-    
-       
-       
-    }
-    #footer>div>a{
-        color: rgb(248,245,244)  ;
-        text-decoration: none;
-        font-size: 12px;
-        font-family:"Times New Roman";
-        font-weight:700;
-    }
-    
-    #end{
+    #part11{
+        margin-top: 2%;
         display: flex;
-        justify-content: space-between;
-        background-color: rgb(47,51,55);
-        height: 100px;
-        color: rgb(248,245,244)  ;
-    }#endone{
-        margin: 20px 0px 0px 150px;
-    }
-    #endone>p{
-        font-family: "Times New Roman";
-        font-size: 12px;
-        font-weight: 400;
-    }
-    
-    #endtwo{
-        display: grid;
-        grid-template-columns: repeat(5,1fr);
-        gap: 10px;
-    }
-    #endtwo>a{
-        margin-top: 30px;
-          text-decoration: none;
-        color: rgb(248,245,244)  ;
-        font-family: "Times New Roman";
-        font-size: 12px;
-        font-weight: 400;
-    }
-    #ind{
-        height: 14px;
-        width: 30px;
-        align-content: center;
-    }
+        justify-content: center;
+        background-color: #f5f6f7;
+      }
+      #part11>div:first-child{
+        width: 18%;
+      }
+      #part11 input{
+        height: 30px;
+      }
+      #part11 input:last-child{
+        color: white;
+        background-color: #2f3337;
+        border-radius: 5px;
+        height: 40px;
+        width: 100px;
+      }
+      ul li{
+        list-style-type: none;
+        line-height: 25px;
+      }
+    #part11{
+        display: flex;
+        /* /* justify-content: center; */
+        gap: 30px; 
+      }
+      /* 12th part */
+      #part12{
+        display: flex;
+        background-color: #545658;
+        justify-content: space-evenly;
+      }
+      #part12 ul li,#part12 a{
+        list-style-type: none;
+        width: 100%;
+        line-height: 40px;
+        color: white;
+      }
+      
+      .footersec{
+      display: flex;
+      justify-content: space-around;
+      background-color:#2f3337;
+      }
+      .footersec p{
+      color: white;
+      text-align: left;
+      }
+      
+      @media only screen and (max-width: 700px){
+        body{
+          width: 100%;
+        }
+        #part2,#part3{
+         display: grid;
+         grid-template-columns: repeat(3,1fr);
+        }
+        #part10{
+          display: grid;
+         grid-template-columns: repeat(2,1fr);
+        }
+        #part11,.footersec{
+          flex-direction: column;
+          align-items: center;
+        }
+        .footersec{
+          display: none;
+        }
+        #parentbox{
+          width: 100%;
+        }
+        #part11 img,#part11>div:nth-child(2){
+          margin-bottom: -35px;
+        }
+      }
     /* footer section css ends here  */
 
 .rating {

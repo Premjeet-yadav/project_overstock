@@ -202,3 +202,14 @@ function filterbyprice(){
         displayproduct(furniture_data);
     }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    var loginLogo = document.getElementById("login-logo");
+    loginLogo.addEventListener("click", function() {
+      window.location.href = "login.html";
+    });
+    var cartref = document.getElementById("cart-logo");
+    cartref.addEventListener("click",function(){
+      window.location.href = "cart.html"
+    })
+  });

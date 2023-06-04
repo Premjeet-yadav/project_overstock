@@ -10,11 +10,100 @@
     <script src="https://kit.fontawesome.com/4db740c557.js" crossorigin="anonymous"></script>
 </head>
 <style>
-	
-body {
-    font-family: HelveticaNeue,Helvetica Neue,Helvetica,Arial,sans-serif;
-}
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    header {
+      background-color: #f1f1f1;
+      padding: 10px;
+    }
 
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo a {
+      display: inline-block;
+    }
+
+    .logo img {
+      height: 30px;
+    }
+
+    .search-box {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      margin: 0 10px;
+    }
+
+    .search-box input {
+      flex-grow: 1;
+      padding: 5px;
+      height: 10px;
+      width: 100%;
+    }
+
+    .search-box .search-icon {
+      width: 20px;
+      height: 20px;
+      margin-left: 10px;
+    }
+
+    .icons {
+      display: flex;
+      justify-content: center;
+    }
+
+    .icon {
+      color: #0a0808;
+      font-size: 18px;
+      margin: 0 5px;
+    }
+
+    .categories {
+      display: flex;
+    }
+
+    .category {
+      margin: 0 20px;
+      position: relative;
+    }
+
+    .description-popup {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      padding: 10px;
+      z-index: 2;
+    }
+
+    .category:hover .description-popup {
+      display: block;
+    }
+
+    .description-section {
+      display: flex;
+    }
+
+    .description-column {
+      flex: 1;
+      padding: 10px;
+    }
+
+    @media (max-width: 700px) {
+      .categories {
+        display: none;
+      }
+    }
+    /* navbaar css ends here */
 .top_Signup_container{
     height: 110px;
     background-color: #2f3337;
@@ -414,10 +503,171 @@ font-size: 12px;
 p{
 	text-align: center;
 }
+#part11{
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  background-color: #f5f6f7;
+}
+#part11>div:first-child{
+  width: 18%;
+}
+#part11 input{
+  height: 30px;
+}
+#part11 input:last-child{
+  color: white;
+  background-color: #2f3337;
+  border-radius: 5px;
+  height: 40px;
+  width: 100px;
+}
+#part11{
+  display: flex;
+  /* /* justify-content: center; */
+  gap: 30px; 
+}
+/* 12th part */
+#part12{
+  display: flex;
+  background-color: #545658;
+  justify-content: space-evenly;
+}
+#part12 ul li,#part12 a{
+  list-style-type: none;
+  width: 100%;
+  line-height: 40px;
+  color: white;
+}
 
+.footersec{
+display: flex;
+justify-content: space-around;
+background-color:#2f3337;
+}
+.footersec p{
+color: white;
+text-align: left;
+}
+
+@media only screen and (max-width: 700px){
+  body{
+    width: 100%;
+  }
+  #part2,#part3{
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+  }
+  #part10{
+    display: grid;
+   grid-template-columns: repeat(2,1fr);
+  }
+  #part11,.footersec{
+    flex-direction: column;
+    align-items: center;
+  }
+  .footersec{
+    display: none;
+  }
+  #parentbox{
+    width: 100%;
+  }
+  #part11 img,#part11>div:nth-child(2){
+    margin-bottom: -35px;
+  }
+}
 </style>
 <body>
-    
+  <header>
+    <nav>
+      <div class="container">
+        <div class="logo">
+          <a href="index.html"><img src="https://logos-download.com/wp-content/uploads/2017/01/Overstock_logo.png" alt="Logo"></a>
+        </div>
+        <div class="search-box">
+          <input type="text" placeholder="Search for products, services, etc.">
+          <img src="https://th.bing.com/th/id/R.cdab85a392e92623afa27de32443379f?rik=0RkIkX%2bdiSIFZA&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fsearch-button-png-search-icon-this-icon-is-supposed-to-represent-a-magnifying-glass-it-s-a-large-png-50-px-1600.png&ehk=grlbuyhad%2bYRRqy5sfjRfmWOEHvzxlyha5HDmdw0wtE%3d&risl=&pid=ImgRaw&r=0" alt="Search Icon" class="search-icon">
+        </div>
+        <div class="icons">
+          <div class="icon">
+            <i id="login-logo" class="far fa-user-circle"></i>
+          </div>
+          <div class="icon">
+            <i class="far fa-heart"></i>
+          </div>
+          <div class="icon">
+            <i id="cart-logo" class="fas fa-shopping-cart"></i>
+          </div>
+        </div>
+      </div>
+      <div class="categories">
+        <div class="category">
+          <p>Furniture</p>
+          <div class="description-popup">
+            <div class="description-section">
+              <div class="description-column">
+                <p>Living Room Furniture</p>
+                <p>Sofas and Couches</p>
+                <p>Sectionals</p>
+                <p>Benches</p>
+                <p>Ottomans and Poufs</p>
+              </div>
+              <div class="description-column">
+                <p>Accent Chairs</p>
+                <p>Recliners</p>
+                <p>Coffee and Accent Tables</p>
+                <p>TV Stands</p>
+              
+              </div>
+              <div class="description-column">
+                <p>Bedroom Furniture</p>
+                <p>Beds</p>
+                <p>Bedroom Sets</p>
+                <p>Headboards</p>
+                <p>Bed Frames</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="category">
+          <p>Outdoor</p>
+        </div>
+        <div class="category">
+            <p>rugs</p>
+          </div>
+          <div class="category">
+            <p>Decor</p>
+          </div>
+          <div class="category">
+            <p>Bedding</p>
+          </div>
+          <div class="category">
+            <p>Improvement</p>
+          </div>
+          <div class="category">
+            <p>Kitchen</p>
+          </div>
+          <div class="category">
+            <p>Lighting</p>
+          </div>
+          <div class="category">
+            <p>Kids</p>
+          </div>
+          <div class="category">
+            <p>Bath</p>
+          </div>
+          <div class="category">
+            <p>More</p>
+          </div>
+          <div class="category">
+            <p>Ideas</p>
+          </div>
+          <div class="category">
+            <p>Sales and Deals</p>
+          </div>
+      </div>
+    </nav>
+  </header>
         <div class="cart-body">
             <h1 class="shopping-cart-text">Shopping Cart</h1>
             <div class="left-right">
@@ -433,91 +683,257 @@ p{
                     <div class="bottom">
                         <div class="bottom-top">
                             <span id="total-cost">Your Total</span>
-                            <span id="PromoTotal">INR 0.00</span>
+                          
+                            
                         </div>
-                        <button class="bottom-button">Continue Shopping</button>
+                        
+                        <a href="payment_and_address.html"><button class="bottom-button">Check Out</button></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <nav id="part11">
+      <div style="display: flex; align-items: center; margin-right: -15%">
+        <img
+          src="	https://ak1.ostkcdn.com/img/mxc/7722_EmailCoupon.svg"
+          alt="discounticon"
+        />
+      </div>
+      <div>
+        <h2>Take 10% Off Today*</h2>
+        <p>
+          Plus, get exclusive offers & savings! <br />
+          <span style="font-size: small"
+            >*Some Exclusions Apply.
+            <a
+              style="color: black"
+              href="https://www.overstock.com/88255/static.html"
+              ><u>See Details </u></a
+            ></span>
+        </p>
+      </div>
+      <div style="display: flex; align-items: center; gap: 5px">
+        <input type="email" value="Your Email Adress" /><input
+          type="submit"
+          value="Sign Up"
+        />
+      </div>
+    </nav>
+
+    <!-- 12th part -->
+    <footer>
+      <div id="part12">
+        <div>
+          <ul>
+            <li><h5>MY ACCOUNT</h5></li>
+            <li><a href=""> Orders & Returns</a></li>
+            <li><a href="">Email Preferences</a></li>
+            <li><a href="">Account Settings</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><h5>LET US HELP</h5></li>
+            <li>
+              <a
+                href="https://help.overstock.com/help/s/article/International-Customer-Care"
+                >Contact Customer Care</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://overstock.force.com/help/s/article/International-Order-Shipping-Information"
+                >Shipping Information</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://help.overstock.com/help/s/article/International-Returns"
+                >Return Policy</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://help.overstock.com/help/s/article/International-Help-Home"
+                >International Help</a
+              >
+            </li>
+            <li>
+              <a href="https://www.overstock.com/accessibility"
+                >Accessibility</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><h5>COMPANY INFORMATION</h5></li>
+            <li>
+              <a href="https://www.overstock.com/about">About Overstock™</a>
+            </li>
+            <li>
+              <a href="https://www.overstock.com/contact-us">Contact Us</a>
+            </li>
+            <li><a href="https://www.overstock.com/careers">Careers</a></li>
+            <li>
+              <a href="http://investors.overstock.com/events"
+                >Investor Relations</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://overstock.az1.qualtrics.com/jfe/form/SV_4TKJSQDaj6oDHE1"
+                >Sell Your Products</a
+              >
+            </li>
+            <li>
+              <a href="https://www.overstock.com/86543/static.html"
+                >Supply Chain Transparency</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><h5>MORE WAYS TO SHOP</h5></li>
+            <li>
+              <a href="https://www.overstock.com/guides/tips-and-ideas/"
+                >Tips & Ideas</a
+              >
+            </li>
+            <li><a href="https://www.overstock.com/deals">Deals</a></li>
+            <li>
+              <a
+                href="https://www.overstock.com/Clearance,/clearance,/results.html"
+                >Clearance</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.overstock.com/New-Products,/new__products,/results.html"
+                >New Arrivals</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footersec">
+        <div >
+          <p>
+            © Copyright 2023, Overstock.com®, Inc. <br />
+            799 Coliseum Way Midvale, UT 84047 | 1-800-843-2446
+          </p>
+        </div>
+        <div
+          style="
+            width: 35%;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+          " class="lastfooter"
+        >
+          <p>Privacy Policy</p>
+          <p>Terms & Conditions</p>
+          <p>*Promotion Terms</p>
+          <p>Ship to:</p>
+        </div>
+      </div>
+    </footer>
     
 </body>
 <script src="cart.js"></script>
 <Script>
-	  var  data = [
-    {
-        image : "https://ak1.ostkcdn.com/images/products/is/images/direct/b218135cd895308603443f768e318c6cc0491386/HomCom-Faux-Leather-Adjustable-Manual-Swivel-Base-Recliner-Chair-with-Comfortable-and-Relaxing-Footrest.jpg?imwidth=480&impolicy=medium",
-        details : "HomCom Leather Adjustable Manual Base Recliner Chair with Comfortable and Relaxing Footrest",
-       MRP: 27893,
-        
-    },
-	{
-        image : "https://ak1.ostkcdn.com/images/products/is/images/direct/b218135cd895308603443f768e318c6cc0491386/HomCom-Faux-Leather-Adjustable-Manual-Swivel-Base-Recliner-Chair-with-Comfortable-and-Relaxing-Footrest.jpg?imwidth=480&impolicy=medium",
-        details : "HomCom Leather Adjustable Manual Base Recliner Chair with Comfortable and Relaxing Footrest",
-       MRP: 27893,
-        
-    },
-    {
-        image : "https://ak1.ostkcdn.com/images/products/is/images/direct/b218135cd895308603443f768e318c6cc0491386/HomCom-Faux-Leather-Adjustable-Manual-Swivel-Base-Recliner-Chair-with-Comfortable-and-Relaxing-Footrest.jpg?imwidth=480&impolicy=medium",
-        details : "HomCom Leather Adjustable Manual Base Recliner Chair with Comfortable and Relaxing Footrest",
-       MRP: 27893,
-        
-    },
-    {
-        image : "https://ak1.ostkcdn.com/images/products/is/images/direct/7f888bddbef2995649425836903dbfb1006280c0/Copper-Grove-Cranesbill-Mudroom-Shoe-Storage-Bench.jpg?imwidth=480&impolicy=medium",
-        details : "Copper Grove Cranesbill Mudroom Shoe Storage Bench",
-        MRP : 7464,
-        
-    },
-      {
-        image : "https://ak1.ostkcdn.com/images/products/is/images/direct/dc34ab1e5cb72f582555c3ea76b7c82cad2024c2/Porch-%26-Den-Holly-Hill-Solid-Acacia-Recliner-End-Table.jpg?imwidth=480&impolicy=medium",
-        details : "Porch & Den Holly Hill Solid Acacia Recliner End Table",
-        MRP : 8228,
-        
-    },
-]   //JSON.parse(localStorage.getItem("add-items")) || []
-showItems(data)
-var totalPrice = 0
-function showItems(data){
-    document.querySelector("#container").textContent = ""
-    data.map(function(Element, index){
-        var img = document.createElement("img")
-        img.setAttribute("src", Element.image)
-        img.setAttribute("id", "image")
-        var info = document.createElement("p")
-        info.textContent = Element.details
-        info.setAttribute("id", "info")
-        var price = document.createElement("p")
-        price.textContent = Element.MRP
-        price.setAttribute("id", "price")
-        var remove = document.createElement("button")
-        remove.textContent = "Remove Item"
-        remove.setAttribute("id", "remove")
-        remove.addEventListener("click", function(){
-            removeItem(Element, index)
-        })
-        var rightdiv = document.createElement("div")
-        rightdiv.setAttribute("id", "item-right-div")
-        rightdiv.append(info, price, remove)
-        var items = document.createElement("div")
-        items.setAttribute("id", "item")
-        items.append(img, rightdiv)
-        document.querySelector("#container").append(items)
-    })
-    function removeItem(Element, index){
-        data.splice(index, 1)
-        localStorage.setItem("add-items", JSON.stringify(data))
-        showItems(data)
+	var data  = JSON.parse(localStorage.getItem("cartData")) || [];
+
+ //JSON.parse(localStorage.getItem("add-items")) || []
+
+showItems(data);
+
+function showItems(data) {
+  document.querySelector("#container").textContent = "";
+
+  data.forEach(function (Element, index) {
+    var img = document.createElement("img");
+    img.setAttribute("src", Element.img_url
+);
+    img.setAttribute("id", "image");
+
+    var info = document.createElement("p");
+    info.textContent = Element.name;
+    info.setAttribute("id", "info");
+
+    var price = document.createElement("p");
+    price.textContent ="INR "+Element.price;
+    price.setAttribute("id", "price");
+
+    var remove = document.createElement("button");
+    remove.textContent = "Remove Item";
+    remove.setAttribute("id", "remove");
+    remove.addEventListener("click", function () {
+      removeItem(Element, index);
+    });
+
+    var select = document.createElement("select");
+    select.style= "width:40px";
+    select.setAttribute("data-index", index);
+    select.addEventListener("change", function () {
+      calculateTotalPrice();
+    });
+
+    for (var i = 1; i <= 5; i++) {
+      var option = document.createElement("option");
+     
+      option.text = i;
+      option.value = i;
+      select.appendChild(option);
     }
-    var c = function(acc, element){
-        return acc + element.MRP
-    }
-    var price = data.reduce (c,0)
-    document.getElementById("total-cost").textContent = "INR " + price
-    localStorage.setItem("total-cost", JSON.stringify(price))
+
+    var rightdiv = document.createElement("div");
+    rightdiv.setAttribute("id", "item-right-div");
+    rightdiv.append(info, price, select, remove);
+
+    var items = document.createElement("div");
+    items.setAttribute("id", "item");
+    items.append(img, rightdiv);
+
+    document.querySelector("#container").append(items);
+  });
+
+  calculateTotalPrice();
 }
 
+function removeItem(Element, index) {
+  data.splice(index, 1);
+  localStorage.setItem("add-items", JSON.stringify(data));
+  showItems(data);
+}
+
+function calculateTotalPrice() {
+  var totalPrice = 0;
+
+  var selectElements = document.querySelectorAll("#item-right-div select");
+  selectElements.forEach(function (selectElement) {
+    var index = selectElement.getAttribute("data-index");
+    var quantity = parseInt(selectElement.value);
+    var itemPrice = data[index].price;
+    totalPrice += itemPrice * quantity;
+  });
+
+  document.getElementById("total-cost").textContent = "INR " + totalPrice;
+  localStorage.setItem("total-cost", JSON.stringify(totalPrice));
+}
+document.addEventListener("DOMContentLoaded", function() {
+      var loginLogo = document.getElementById("login-logo");
+      loginLogo.addEventListener("click", function() {
+        window.location.href = "login.html";
+      });
+      var cartref = document.getElementById("cart-logo");
+      cartref.addEventListener("click",function(){
+        window.location.href = "cart.html"
+      })
+    });
 
 </Script>
 </html>

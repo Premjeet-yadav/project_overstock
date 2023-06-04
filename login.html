@@ -45,6 +45,11 @@
       margin-top: -10px;
       margin-bottom: 10px;
     }
+    p {
+        text-align: center;
+        color:red;
+       
+    }
   </style>
 </head>
 <body>
@@ -93,6 +98,7 @@
 
         if (password === storedPassword) {
           alert('Sign up successful!');
+          window.location.href = 'index.html'; // Redirect to index.html
         } else {
           alert('Invalid username or password!');
         }
