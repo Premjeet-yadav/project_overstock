@@ -8,7 +8,6 @@
       padding: 0;
     }
     
-
     header {
       background-color: #f1f1f1;
       padding: 10px;
@@ -32,14 +31,14 @@
       flex-grow: 1;
       display: flex;
       align-items: center;
-      margin: 0 10px; /* Updated margin values */
+      margin: 0 10px;
     }
 
     .search-box input {
       flex-grow: 1;
       padding: 5px;
       height: 10px;
-      width: 100%; /* Added width property */
+      width: 100%;
     }
 
     .search-box .search-icon {
@@ -61,23 +60,22 @@
 
     .categories {
       display: flex;
+      flex-wrap: wrap;
     }
 
     .category {
       margin: 0 20px;
       position: relative;
-    
     }
 
     .description-popup {
       display: none;
-      position:absolute;
+      position: absolute;
       top: 100%;
       left: 0;
-      width: 100%;
-      background-color:white;
-    
-    
+      background-color: white;
+      padding: 10px;
+      z-index: 2;
     }
 
     .category:hover .description-popup {
@@ -86,61 +84,28 @@
 
     .description-section {
       display: flex;
+      flex-wrap: wrap;
     }
 
     .description-column {
       flex: 1;
       padding: 10px;
     }
-    .categories {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-}
 
-.logo {
-  flex: 1;
-  /* Logo styling */
-}
-
-.container {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.container a {
-  text-decoration: none;
-  color: #333;
-  margin-left: 20px;
-}
-
-/* Media queries for responsive design */
-
-/* @media (max-width: 768px) {
-  .categories {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .logo, .container {
-    flex: initial;
-    margin-bottom: 10px;
-  }
-  
-  .container {
-    justify-content: flex-start;
-  }
-} */
- @media  (max-width:600px) {
-  .categories{
+    @media (max-width: 600px) {
+      .categories {
         display: none;
       }
+      
+      .logo, .container {
+        flex: initial;
+        margin-bottom: 10px;
+      }
+      
+      .container {
+        justify-content: flex-start;
+      }
     } 
-
-    
   </style>
 </head>
 <body>
@@ -183,7 +148,6 @@
                 <p>Recliners</p>
                 <p>Coffee and Accent Tables</p>
                 <p>TV Stands</p>
-              
               </div>
               <div class="description-column">
                 <p>Bedroom Furniture</p>
@@ -199,38 +163,38 @@
           <p>Outdoor</p>
         </div>
         <div class="category">
-            <p>rugs</p>
-          </div>
-          <div class="category">
-            <p>Decor</p>
-          </div>
-          <div class="category">
-            <p>Bedding</p>
-          </div>
-          <div class="category">
-            <p>Improvement</p>
-          </div>
-          <div class="category">
-            <p>Kitchen</p>
-          </div>
-          <div class="category">
-            <p>Lighting</p>
-          </div>
-          <div class="category">
-            <p>Kids</p>
-          </div>
-          <div class="category">
-            <p>Bath</p>
-          </div>
-          <div class="category">
-            <p>More</p>
-          </div>
-          <div class="category">
-            <p>Ideas</p>
-          </div>
-          <div class="category">
-            <p>Sales and Deals</p>
-          </div>
+          <p>Rugs</p>
+        </div>
+        <div class="category">
+          <p>Decor</p>
+        </div>
+        <div class="category">
+          <p>Bedding</p>
+        </div>
+        <div class="category">
+          <p>Improvement</p>
+        </div>
+        <div class="category">
+          <p>Kitchen</p>
+        </div>
+        <div class="category">
+          <p>Lighting</p>
+        </div>
+        <div class="category">
+          <p>Kids</p>
+        </div>
+        <div class="category">
+          <p>Bath</p>
+        </div>
+        <div class="category">
+          <p>More</p>
+        </div>
+        <div class="category">
+          <p>Ideas</p>
+        </div>
+        <div class="category">
+          <p>Sales and Deals</p>
+        </div>
       </div>
     </nav>
   </header>
