@@ -4,6 +4,12 @@
     background-position: center;
   } */
   /* navbar part */
+  *{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  /* header{
+    position: fixed;
+  } */
   #searchbar{
     display: flex;
     justify-content: space-between;
