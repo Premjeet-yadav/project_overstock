@@ -19,6 +19,14 @@ function displayproduct(){
         color.textContent = "Color : "+el.color;
         var price = document.createElement("p");
         price.textContent = "Starting at INR "+el.price;
+        price.style.color = "red";
+        var coupan_div = document.createElement("div");
+        coupan_div.setAttribute("id","coupan_div");
+        var coupan_desc = document.createElement("p");
+        coupan_desc.textContent = "You have coupons available! Visit the coupon page.";
+        // var coupon_img = document.createElement("img");
+        // coupon_img.src = "https://png.pngtree.com/element_our/20190528/ourmid/pngtree-50--coupon-icon-image_1144359.jpg";
+        coupan_div.append(coupan_desc);
         var btn = document.createElement("button");
     var rating = document.createElement("div");
     rating.classList.add("rating");
@@ -38,7 +46,7 @@ function displayproduct(){
             addToCart(el);
         })
         div1.append(img);
-        div2.append(name,brand,rating,color,price,btn);
+        div2.append(name,brand,rating,color,price,coupan_div,btn);
      document.getElementById("parent").append(div1,div2);
     })
     

@@ -47,6 +47,10 @@ body{
     height: 20px;
     width: 20px;
 }
+#coupan_div{
+  display: block;
+  border: dashed,4px,grey;
+}
 
 .rating {
     color: #7e7d7b; /* Set the star color */
