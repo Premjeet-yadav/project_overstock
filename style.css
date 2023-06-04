@@ -4,11 +4,24 @@
     background-position: center;
   } */
   /* navbar part */
-  /* header{
-    position: sticky;
-  } */
+  #searchbar{
+    display: flex;
+    justify-content: space-between;
+    height: 35px;
+    margin: 20px 0 20px;
+    padding: 0 40px 0 20px;
+  }
+  #searchbar>div:last-child{
+    display: flex;
+    justify-content: center;
+    gap: 20%;
+    /* height: 100%; */
+  }
+  #searchbar>div:last-child>div i{
+  font-size: 25px;
+  }
 
-  /* #navbar{
+  #navbar{
     display: flex;
     justify-content: space-between;
     height: 30px;
@@ -40,217 +53,8 @@
   .megadropcolumn:last-child ul li{
   font-weight: bold;
   color: #cf3d43;
-  } */
-
-  /* header {
-    background-color: #f1f1f1;
   }
 
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .logo a {
-    display: inline-block;
-  }
-
-  .logo img {
-    height: 30px;
-  }
-
-  .search-box {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    margin: 0 10px; 
-  }
-
-  .search-box input {
-    flex-grow: 1;
-    padding: 5px;
-    height: 10px;
-    width: 100%; 
-  }
-
-  .search-box .search-icon {
-    width: 20px;
-    height: 20px;
-    margin-left: 10px;
-  }
-
-  .icons {
-    display: flex;
-    justify-content: center;
-    display: block;
-  }
-
-  .icon {
-    color: #0a0808;
-    font-size: 18px;
-    margin: 0 5px;
-    display: block;
-  }
-
-  .categories {
-    display: flex;
-  }
-
-  .category {
-    margin: 0 20px;
-    position: relative;
-  
-  }
-
-  .description-popup {
-    display: none;
-    position:absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color:white;
-  
-  
-  }
-
-  .category:hover .description-popup {
-    display: block;
-  }
-
-  .description-section {
-    display: flex;
-  }
-
-  .description-column {
-    flex: 1;
-    padding: 10px;
-  }
-  .categories {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 10px;
-}
-
-.logo {
-flex: 1;
-}
-
-.container {
-flex: 1;
-display: flex;
-justify-content: flex-end;
-align-items: center;
-}
-
-.container a {
-text-decoration: none;
-color: #333;
-margin-left: 20px;
-}
-
-@media  (max-width:600px) {
-  .categories{
-        display: none;
-      }
-    } 
-    */
-/* navbar css starts here */
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-    
-    header {
-      background-color: #f1f1f1;
-      padding: 10px;
-    }
-
-    .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo a {
-      display: inline-block;
-    }
-
-    .logo img {
-      height: 30px;
-    }
-
-    .search-box {
-      flex-grow: 1;
-      display: flex;
-      align-items: center;
-      margin: 0 10px;
-    }
-
-    .search-box input {
-      flex-grow: 1;
-      padding: 5px;
-      height: 10px;
-      width: 100%;
-    }
-
-    .search-box .search-icon {
-      width: 20px;
-      height: 20px;
-      margin-left: 10px;
-    }
-
-    .icons {
-      display: flex;
-      justify-content: center;
-    }
-
-    .icon {
-      color: #0a0808;
-      font-size: 18px;
-      margin: 0 5px;
-    }
-
-    .categories {
-      display: flex;
-    }
-
-    .category {
-      margin: 0 20px;
-      position: relative;
-    }
-
-    .description-popup {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: white;
-      padding: 10px;
-      z-index: 2;
-    }
-
-    .category:hover .description-popup {
-      display: block;
-    }
-
-    .description-section {
-      display: flex;
-    }
-
-    .description-column {
-      flex: 1;
-      padding: 10px;
-    }
-
-    @media (max-width: 700px) {
-      .categories {
-        display: none;
-      }
-    }
-     /*navbar css ends here  */
   ul li{
     list-style-type: none;
     line-height: 25px;
@@ -375,7 +179,7 @@ a:link {
   display: flex;
   gap: 20px;
 }
-button{
+.seebtn{
   padding: 15px 0 5px;
   display: grid;
   margin: auto;
@@ -444,7 +248,7 @@ color: white;
 text-align: left;
 }
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 800px){
   body{
     width: 100%;
   }
@@ -468,5 +272,17 @@ text-align: left;
   }
   #part11 img,#part11>div:nth-child(2){
     margin-bottom: -35px;
+  }
+  #navbar{
+    display: none;
+  }
+  #searchbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5% 0 0;
+  }
+  .inputbar{
+    margin-right: 22px;
+    width: 45%;
   }
 }
