@@ -180,7 +180,7 @@
       <nav>
         <div class="container">
           <div class="logo">
-            <a href="#"><img src="https://logos-download.com/wp-content/uploads/2017/01/Overstock_logo.png" alt="Logo"></a>
+            <a href="index.html"><img src="https://logos-download.com/wp-content/uploads/2017/01/Overstock_logo.png" alt="Logo"></a>
           </div>
           <div class="search-box">
             <input type="text" placeholder="Search for products, services, etc.">
@@ -188,13 +188,13 @@
           </div>
           <div class="icons">
             <div class="icon">
-              <i class="far fa-user-circle"></i>
+              <i id="login-logo" class="far fa-user-circle"></i>
             </div>
             <div class="icon">
               <i class="far fa-heart"></i>
             </div>
             <div class="icon">
-              <i class="fas fa-shopping-cart"></i>
+              <i id="cart-logo" class="fas fa-shopping-cart"></i>
             </div>
           </div>
         </div>
@@ -1005,4 +1005,15 @@
     const translateXValue = -slideIndex * slideWidth;
     sliderContainer.style.transform = `translateX(${translateXValue}px)`;
   }
+  // add this part in every page as linking of signup and cartpage is done here 
+  document.addEventListener("DOMContentLoaded", function() {
+      var loginLogo = document.getElementById("login-logo");
+      loginLogo.addEventListener("click", function() {
+        window.location.href = "login.html";
+      });
+      var cartref = document.getElementById("cart-logo");
+      cartref.addEventListener("click",function(){
+        window.location.href = "cart.html"
+      })
+    });
 </script>
