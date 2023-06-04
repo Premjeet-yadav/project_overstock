@@ -5,373 +5,248 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Overstock.com Sales & Deals | Shop The Best Discounts Online</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css" />
-    <style>
-      header {
-      background-color: #f1f1f1;
-      padding: 10px;
-    }
-
-    .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo a {
-      display: inline-block;
-    }
-
-    .logo img {
-      height: 30px;
-    }
-
-    .search-box {
-      flex-grow: 1;
-      display: flex;
-      align-items: center;
-      margin: 0 10px; /* Updated margin values */
-    }
-
-    .search-box input {
-      flex-grow: 1;
-      padding: 5px;
-      height: 10px;
-      width: 100%; /* Added width property */
-    }
-
-    .search-box .search-icon {
-      width: 20px;
-      height: 20px;
-      margin-left: 10px;
-    }
-
-    .icons {
-      display: flex;
-      justify-content: center;
-    }
-
-    .icon {
-      color: #0a0808;
-      font-size: 18px;
-      margin: 0 5px;
-    }
-
-    .categories {
-      display: flex;
-    }
-
-    .category {
-      margin: 0 20px;
-      position: relative;
-    
-    }
-
-    .description-popup {
-      display: none;
-      position:absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background-color:white;
-    
-    
-    }
-
-    .category:hover .description-popup {
-      display: block;
-    }
-
-    .description-section {
-      display: flex;
-    }
-
-    .description-column {
-      flex: 1;
-      padding: 10px;
-    }
-    .categories {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-}
-
-.logo {
-  flex: 1;
-  /* Logo styling */
-}
-
-.container {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.container a {
-  text-decoration: none;
-  color: #333;
-  margin-left: 20px;
-}
-
-    </style>
   </head>
   <body>
-    <!-- <header>
-    <nav id="navbar">
-      <div>
-        <a href="">Furniture</a>
-        <div class="megadropdown">
-          <div class="megadropcolumn">
-            <ul>
-            <li style="font-weight: bold;margin-bottom: 10px;"><a href="">Living Room Furniture</a></li>
-              <li><a href="C:\Users\user\OneDrive\masai\project overstock\project_overstock\product.html"> Sofas and Couches</a></li>
-              <li>Sectionals</li>
-              <li>Benches</li>
-              <li>Ottomans and Poufs</li>
-              <li>Accent Chairs</li>
-              <li>Recliners</li>
-              <li>Coffee and Accent Tables</li>
-              <li>TV Stands</li>
-              <li>Best Sellers</li>
-            </ul>
-          </div>
-          <div class="megadropcolumn">
-            <ul>
-            <li style="font-weight: bold;margin-bottom: 10px;"><a href="">Bedroom Furniture</a></li>
-              <li>Beds</li>
-              <li>Bedroom Sets</li>
-              <li>Headboards</li>
-              <li>Bed Frames</li>
-              <li>Dressers and Chest</li>
-              <li>Nightstands</li>
-              <li>Armoires and Wardobes</li>
-              <li>Mattresses</li>
-              <li>Kids Beds</li>
-              <li>Best Sellers</li>
-            </ul>
-          </div>
-          <div class="megadropcolumn">
-            <ul>
-            <li style="font-weight: bold;margin-bottom: 10px;"><a href="">Dining, Kitchen and Bar</a></li>
-              <li>Kitchen and Dining Sets</li>
-              <li>Kitchen and Dining Chairs</li>
-              <li>Kitchen and Dining Tables</li>
-              <li>Counter and Bar Stools</li>
-              <li>Bar Tables</li>
-              <li>Buffets and Sideboards</li>
-              <li>Home Bars</li>
-              <li>Kitchen islands and carts</li>
-              <li>Kitchen Furniture</li>
-              <li>Best Sellers</li>
-            </ul>
-          </div>
-          <div class="megadropcolumn">
-            <img style="width: 100%;margin-top: 25px;"
-              src="https://ak1.ostkcdn.com/images/products/is/images/direct/89b8a1064cd24eabab43e58e368c33f27925094d/Slumber-Solutions-12-inch-Gel-Memory-Foam-Choose-Your-Comfort-Mattress.jpg?imwidth=320"
-              alt=""
-            />
-            <p style="font-size: 20px; text-align:left;margin-top: 0;">Extra 15% Off</p>
-          <p style="text-align:left;margin-top: -15px;">Select Matresses by Slumber Solutions*</p>
-          </div>
-          <div class="megadropcolumn">
-            <ul>
-            <li style="font-weight: bold;margin-bottom: 10px;"><a href="">Patio Furniture</a></li>
-              <li>Patio Furniture Sets</li>
-              <li>Outdoor Seating</li>
-              <li>Outdoor Dining Sets</li>
-              <li>Outdoor Tables</li>
-              <li>Outdoor Chaise Lounges</li>
-              <li>Adirondack Chairs</li>
-              <li>Hammocks and Swings</li>
-              <li>Outdoor Benches</li>
-              <li>Best Sellers</li>
-            </ul>
-          </div>
-          <div class="megadropcolumn">
-            <ul>
-            <li style="font-weight: bold;margin-bottom: 10px;"><a href="">Patio Furniture</a></li>
-              <li>Patio Furniture Sets</li>
-              <li>Outdoor Seating</li>
-              <li>Outdoor Dining Sets</li>
-              <li>Outdoor Tables</li>
-              <li>Outdoor Chaise Lounges</li>
-              <li>Adirondack Chairs</li>
-              <li>Hammocks and Swings</li>
-              <li>Outdoor Benches</li>
-              <li>Best Sellers</li>
-            </ul>
-          </div>
-          <div class="megadropcolumn">
-            <ul>
-            <li style="font-weight: bold;margin-bottom: 10px;"><a href="">Patio Furniture</a></li>
-              <li>Patio Furniture Sets</li>
-              <li>Outdoor Seating</li>
-              <li>Outdoor Dining Sets</li>
-              <li>Outdoor Tables</li>
-              <li>Outdoor Chaise Lounges</li>
-              <li>Adirondack Chairs</li>
-              <li>Hammocks and Swings</li>
-              <li>Outdoor Benches</li>
-              <li>Best Sellers</li>
-            </ul>
-          </div>
-          <div class="megadropcolumn">
-            <ul>
-            <li style="font-weight: bold;color: black; margin-bottom: 10px;"><a href="">More Ways to Shop</a></li>
-              <li>Feature Sales</li>
-              <li>New Arrivals</li>
-              <li>Clearance</li>
-              <li>Furniture Advice</li>
-              <li>Best Selling Rugs</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div>
-        <a href="">Outdoor</a>
-        <div></div>
-      </div>
-      <div>
-        <a href="">Rugs</a>
-        <div></div>
-      </div>
-      <div>
-        <a href="">Decor</a>
-        <div></div>
-      </div>
-      <div>
-        <a href="">Bedding</a>
-        <div></div>
-      </div>
-      <div>
-        <a href="">Home Improvement</a>
-        <div></div>
-      </div>
-      <div>
-        <a href="">Kitchen</a>
-        <div></div>
-      </div>
-      <div>
-        <a href="">Lighting</a>
-        <div></div>
-      </div>
-      <div>
-        <a href="">Kids & Baby</a>
-        <div></div>
-      </div>
-      <div>
-        <a href="">Bath</a>
-        <div></div>
-      </div>
-      <div>
-        <a href="">More</a>
-        <div></div>
-      </div>
-      <div>
-        <a href=""></a>
-        <div></div>
-      </div>
-      <div>
-        <a href="">Ideas</a>
-        <div></div>
-      </div>
-      <div>
-        <a style="color: #cf3d43;" href="">Sales & Deals</a>
-        <div></div>
-      </div>
-    </nav>
-  </header> -->
     <!-- header part -->
     <header>
-      <nav>
-        <div class="container">
-          <div class="logo">
-            <a href="#"><img src="https://logos-download.com/wp-content/uploads/2017/01/Overstock_logo.png" alt="Logo"></a>
+      <nav id="searchbar">
+        <div>
+          <a href="homepage.html">
+            <img
+              style="height: 100%"
+              src="data:image/png;base64,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"
+              alt=""
+            />
+          </a>
+        </div>
+        <div style="display: flex;" class="inputbar">
+          <input 
+            style="
+              width: 800px;
+              height: 100%;
+              border: 1px solid #e3e4e7;
+              border-radius: 5px;
+              background-color: #f9fafb;
+            "
+            type="text"
+            placeholder="Search... everything you find ships for free "
+          />
+          <img
+            style="height: 100%"
+            src="data:image/png;base64,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"
+            alt=""
+          />
+        </div>
+        <div>
+          <div ><a href="login.page.html">
+           <div><i class="far fa-user-circle"></i></div>
+            <div>Account</div>
+          </a>
           </div>
-          <div class="search-box">
-            <input type="text" placeholder="Search for products, services, etc.">
-            <img src="https://th.bing.com/th/id/R.cdab85a392e92623afa27de32443379f?rik=0RkIkX%2bdiSIFZA&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fsearch-button-png-search-icon-this-icon-is-supposed-to-represent-a-magnifying-glass-it-s-a-large-png-50-px-1600.png&ehk=grlbuyhad%2bYRRqy5sfjRfmWOEHvzxlyha5HDmdw0wtE%3d&risl=&pid=ImgRaw&r=0" alt="Search Icon" class="search-icon">
+          <div ><a href="">
+            <div><i class="far fa-heart"></i></div>
+            <div>Lists</div>
+          </a>
           </div>
-          <div class="icons">
-            <div class="icon">
-              <i class="far fa-user-circle"></i>
+          <div><a href="cart.html">
+            <div><i class="fas fa-shopping-cart"></i></div>
+            <div>Cart</div>
+          </a>
+          </div>
+        </div>
+      </nav>
+
+      <nav id="navbar">
+        <div>
+          <a href="">Furniture</a>
+          <div class="megadropdown">
+            <div class="megadropcolumn">
+              <ul>
+                <li style="font-weight: bold; margin-bottom: 10px">
+                  <a href="">Living Room Furniture</a>
+                </li>
+                <li>
+                  <a
+                    href="product.html"
+                  >
+                    Sofas and Couches</a
+                  >
+                </li>
+                <li>Sectionals</li>
+                <li>Benches</li>
+                <li>Ottomans and Poufs</li>
+                <li>Accent Chairs</li>
+                <li>Recliners</li>
+                <li>Coffee and Accent Tables</li>
+                <li>TV Stands</li>
+                <li>Best Sellers</li>
+              </ul>
             </div>
-            <div class="icon">
-              <i class="far fa-heart"></i>
+            <div class="megadropcolumn">
+              <ul>
+                <li style="font-weight: bold; margin-bottom: 10px">
+                  <a href="">Bedroom Furniture</a>
+                </li>
+                <li>Beds</li>
+                <li>Bedroom Sets</li>
+                <li>Headboards</li>
+                <li>Bed Frames</li>
+                <li>Dressers and Chest</li>
+                <li>Nightstands</li>
+                <li>Armoires and Wardobes</li>
+                <li>Mattresses</li>
+                <li>Kids Beds</li>
+                <li>Best Sellers</li>
+              </ul>
             </div>
-            <div class="icon">
-              <i class="fas fa-shopping-cart"></i>
+            <div class="megadropcolumn">
+              <ul>
+                <li style="font-weight: bold; margin-bottom: 10px">
+                  <a href="">Dining, Kitchen and Bar</a>
+                </li>
+                <li>Kitchen and Dining Sets</li>
+                <li>Kitchen and Dining Chairs</li>
+                <li>Kitchen and Dining Tables</li>
+                <li>Counter and Bar Stools</li>
+                <li>Bar Tables</li>
+                <li>Buffets and Sideboards</li>
+                <li>Home Bars</li>
+                <li>Kitchen islands and carts</li>
+                <li>Kitchen Furniture</li>
+                <li>Best Sellers</li>
+              </ul>
+            </div>
+            <div class="megadropcolumn">
+              <img
+                style="width: 100%; margin-top: 25px"
+                src="https://ak1.ostkcdn.com/images/products/is/images/direct/89b8a1064cd24eabab43e58e368c33f27925094d/Slumber-Solutions-12-inch-Gel-Memory-Foam-Choose-Your-Comfort-Mattress.jpg?imwidth=320"
+                alt=""
+              />
+              <p style="font-size: 20px; text-align: left; margin-top: 0">
+                Extra 15% Off
+              </p>
+              <p style="text-align: left; margin-top: -15px">
+                Select Matresses by Slumber Solutions*
+              </p>
+            </div>
+            <div class="megadropcolumn">
+              <ul>
+                <li style="font-weight: bold; margin-bottom: 10px">
+                  <a href="">Patio Furniture</a>
+                </li>
+                <li>Patio Furniture Sets</li>
+                <li>Outdoor Seating</li>
+                <li>Outdoor Dining Sets</li>
+                <li>Outdoor Tables</li>
+                <li>Outdoor Chaise Lounges</li>
+                <li>Adirondack Chairs</li>
+                <li>Hammocks and Swings</li>
+                <li>Outdoor Benches</li>
+                <li>Best Sellers</li>
+              </ul>
+            </div>
+            <div class="megadropcolumn">
+              <ul>
+                <li style="font-weight: bold; margin-bottom: 10px">
+                  <a href="">Patio Furniture</a>
+                </li>
+                <li>Patio Furniture Sets</li>
+                <li>Outdoor Seating</li>
+                <li>Outdoor Dining Sets</li>
+                <li>Outdoor Tables</li>
+                <li>Outdoor Chaise Lounges</li>
+                <li>Adirondack Chairs</li>
+                <li>Hammocks and Swings</li>
+                <li>Outdoor Benches</li>
+                <li>Best Sellers</li>
+              </ul>
+            </div>
+            <div class="megadropcolumn">
+              <ul>
+                <li style="font-weight: bold; margin-bottom: 10px">
+                  <a href="">Patio Furniture</a>
+                </li>
+                <li>Patio Furniture Sets</li>
+                <li>Outdoor Seating</li>
+                <li>Outdoor Dining Sets</li>
+                <li>Outdoor Tables</li>
+                <li>Outdoor Chaise Lounges</li>
+                <li>Adirondack Chairs</li>
+                <li>Hammocks and Swings</li>
+                <li>Outdoor Benches</li>
+                <li>Best Sellers</li>
+              </ul>
+            </div>
+            <div class="megadropcolumn">
+              <ul>
+                <li
+                  style="font-weight: bold; color: black; margin-bottom: 10px"
+                >
+                  <a href="">More Ways to Shop</a>
+                </li>
+                <li>Feature Sales</li>
+                <li>New Arrivals</li>
+                <li>Clearance</li>
+                <li>Furniture Advice</li>
+                <li>Best Selling Rugs</li>
+              </ul>
             </div>
           </div>
         </div>
-        <div class="categories">
-          <div class="category">
-            <p>Furniture</p>
-            <div class="description-popup">
-              <div class="description-section">
-                <div class="description-column">
-                  <p>Living Room Furniture</p>
-                  <p>Sofas and Couches</p>
-                  <p>Sectionals</p>
-                  <p>Benches</p>
-                  <p>Ottomans and Poufs</p>
-                </div>
-                <div class="description-column">
-                  <p>Accent Chairs</p>
-                  <p>Recliners</p>
-                  <p>Coffee and Accent Tables</p>
-                  <p>TV Stands</p>
-                
-                </div>
-                <div class="description-column">
-                  <p>Bedroom Furniture</p>
-                  <p>Beds</p>
-                  <p>Bedroom Sets</p>
-                  <p>Headboards</p>
-                  <p>Bed Frames</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="category">
-            <p>Outdoor</p>
-          </div>
-          <div class="category">
-              <p>rugs</p>
-            </div>
-            <div class="category">
-              <p>Decor</p>
-            </div>
-            <div class="category">
-              <p>Bedding</p>
-            </div>
-            <div class="category">
-              <p>Improvement</p>
-            </div>
-            <div class="category">
-              <p>Kitchen</p>
-            </div>
-            <div class="category">
-              <p>Lighting</p>
-            </div>
-            <div class="category">
-              <p>Kids</p>
-            </div>
-            <div class="category">
-              <p>Bath</p>
-            </div>
-            <div class="category">
-              <p>More</p>
-            </div>
-            <div class="category">
-              <p>Ideas</p>
-            </div>
-            <div class="category">
-              <p>Sales and Deals</p>
-            </div>
+
+        <div>
+          <a href="">Outdoor</a>
+          <div></div>
+        </div>
+        <div>
+          <a href="">Rugs</a>
+          <div></div>
+        </div>
+        <div>
+          <a href="">Decor</a>
+          <div></div>
+        </div>
+        <div>
+          <a href="">Bedding</a>
+          <div></div>
+        </div>
+        <div>
+          <a href="">Home Improvement</a>
+          <div></div>
+        </div>
+        <div>
+          <a href="">Kitchen</a>
+          <div></div>
+        </div>
+        <div>
+          <a href="">Lighting</a>
+          <div></div>
+        </div>
+        <div>
+          <a href="">Kids & Baby</a>
+          <div></div>
+        </div>
+        <div>
+          <a href="">Bath</a>
+          <div></div>
+        </div>
+        <div>
+          <a href="">More</a>
+          <div></div>
+        </div>
+        <div>
+          <a href=""></a>
+          <div></div>
+        </div>
+        <div>
+          <a href="">Ideas</a>
+          <div></div>
+        </div>
+        <div>
+          <a style="color: #cf3d43" href="">Sales & Deals</a>
+          <div></div>
         </div>
       </nav>
     </header>
@@ -386,7 +261,8 @@
       "
     >
       <a href="">
-        <img style="width: 100%;"
+        <img
+          style="width: 100%"
           src="https://ak1.ostkcdn.com/img/mxc/04282023-HP-A1-INTL-1400x550_DSK-INTL-2.svg"
           alt=""
         />
@@ -875,7 +751,7 @@
         </a>
       </div>
     </div>
-    <button>See All Styles</button>
+    <button class="seebtn">See All Styles</button>
     <h1><span>Trending Search</span></h1>
     <!-- 10th part -->
     <div id="part10">
@@ -1061,7 +937,7 @@
       </div>
 
       <div class="footersec">
-        <div >
+        <div>
           <p>
             © Copyright 2023, Overstock.com®, Inc. <br />
             799 Coliseum Way Midvale, UT 84047 | 1-800-843-2446
@@ -1073,7 +949,8 @@
             align-items: center;
             display: flex;
             justify-content: space-between;
-          " class="lastfooter"
+          "
+          class="lastfooter"
         >
           <p>Privacy Policy</p>
           <p>Terms & Conditions</p>
