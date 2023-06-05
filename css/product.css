@@ -1,100 +1,77 @@
-body{
-    font-family: 'Arial';
+*{
+  font-family: Arial, Helvetica, sans-serif;
 }
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  header {
-    background-color: #f1f1f1;
-    padding: 10px;
-  }
+/* header{
+  position: fixed;
+} */
+#searchbar{
+  display: flex;
+  justify-content: space-between;
+  height: 35px;
+  margin: 20px 0 20px;
+  padding: 0 40px 0 20px;
+}
+#searchbar>div:last-child{
+  display: flex;
+  justify-content: center;
+  gap: 20%;
+  /* height: 100%; */
+}
+#searchbar>div:last-child>div i{
+font-size: 25px;
+}
 
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+#navbar{
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  border: 1px solid#e3e4e7;
+}
+#navbar>div{
+  position: relative;
+}
+#navbar>div>a{
+  line-height: 30px;
+}
+.megadropdown{
+  display: grid ; 
+  grid-template-columns: repeat(4,250px);
+  position: absolute;
+  background-color: #f9f9f9;
+  margin-top:0;
+  padding-right: 25px;
+  display: none;
+}
+.megadropcolumn{
+  float: left;
+}
+#navbar>div:hover .megadropdown{
+  display: block;
+  display: grid ;
+  text-decoration: underline;
+}
+.megadropcolumn:last-child ul li{
+font-weight: bold;
+color: #cf3d43;
+}
 
-  .logo a {
-    display: inline-block;
-  }
+ul li{
+  list-style-type: none;
+  line-height: 25px;
+}
 
-  .logo img {
-    height: 30px;
-  }
-
-  .search-box {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    margin: 0 10px;
-  }
-
-  .search-box input {
-    flex-grow: 1;
-    padding: 5px;
-    height: 10px;
-    width: 100%;
-  }
-
-  .search-box .search-icon {
-    width: 20px;
-    height: 20px;
-    margin-left: 10px;
-  }
-
-  .icons {
-    display: flex;
-    justify-content: center;
-  }
-
-  .icon {
-    color: #0a0808;
-    font-size: 18px;
-    margin: 0 5px;
-  }
-
-  .categories {
-    display: flex;
-  }
-
-  .category {
-    margin: 0 20px;
-    position: relative;
-  }
-
-  .description-popup {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: white;
-    padding: 10px;
-    z-index: 2;
-  }
-
-  .category:hover .description-popup {
-    display: block;
-  }
-
-  .description-section {
-    display: flex;
-  }
-
-  .description-column {
-    flex: 1;
-    padding: 10px;
-  }
-
-  @media (max-width: 700px) {
-    .categories {
-      display: none;
-    }
-  }
-/* saperate */
+ h1{
+color: black;
+  /* text-align: center; */
+  font-size: 40px;
+}
+ h2,h3,p,a{
+  color: black;
+  /* text-align: center; */
+}
+a:link {
+text-decoration: none;
+}
 #parent{
     /* margin: 10%; */
     display: grid;
